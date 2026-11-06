@@ -7,7 +7,7 @@ Read AGENTS.md, this file, and the last 20 lines of PROGRESS.md at session start
 ## Stage 0 — Scaffold
 - [x] T001 | package.json, tsconfig.json, tsconfig.node.json, vite.config.ts, index.html, .gitignore, .npmrc | Init git, Vite+React+TS strict, all npm scripts, install fixed deps.
 - [x] T002 | tailwind.config.ts, postcss.config.js, eslint.config.js, playwright.config.ts, vitest.setup.ts | Configure Tailwind, ESLint, Vitest, Playwright.
-- [ ] T003 | AGENTS.md, DECISIONS.md, PROGRESS.md | Write agent contract, decisions, progress log (TASKS.md exists).
+- [x] T003 | AGENTS.md, DECISIONS.md, PROGRESS.md | Write agent contract, decisions, progress log (TASKS.md exists).
 - [ ] T004 | src/main.tsx, src/App.tsx, src/app/routes.tsx, src/pages/PlaceholderPage.tsx | App bootstrap, hash router, lazy page routes, global error boundary.
 - [ ] T005 | src/styles/tokens.ts, src/styles/globals.css | Design tokens, light/dark tokens, base utility and focus styles.
 
