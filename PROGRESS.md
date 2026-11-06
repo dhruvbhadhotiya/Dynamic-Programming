@@ -17,3 +17,4 @@
 2026-11-06 | T018 | Prism code panel with language tabs, live line highlight, copy feedback, teacher-mode hide; 7 tests pass. Follow-up: ProblemPage wiring.
 2026-11-06 | T020 | Schema-driven input form with inline validation, randomize, revert; 8 tests pass; typecheck + lint clean. Follow-up: ModeToggle (T021).
 2026-11-06 | T021 | Mode toggle with arrow-key navigation, teaching hint, live operation counter; 4 tests pass. Follow-up: PredictMode (T022).
+2026-11-06 | T022 | Prediction panel with keyboard answer entry, hints, scored feedback and reset-per-question; 5 tests pass. Follow-up: QuizEngine (T023).
