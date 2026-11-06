@@ -26,3 +26,7 @@
 2026-11-06 | T026 | HomePage with search/filter, saved-progress totals from localStorage, teacher entry; 7 tests pass. Follow-up: routes/teacher wiring.
 2026-11-06 | T028 | Printable cheat sheet grouped by category with recurrence + complexity tables; 4 tests pass. Follow-up: none.
 2026-11-06 | T030 | Bitmask grid renderer with binary cells, bit legend, compact mode; 9 tests pass. Follow-up: interval/tree renderers.
+2026-11-06 | T031 | Interval triangle renderer with labels and highlight tokens; 6 tests pass. Follow-up: lessons/stepCap.
+2026-11-06 | T032 | TreeDP renderer with per-node state chips and kind badges; 8 tests pass. Follow-up: lessons/stepCap.
+2026-11-06 | T033 | Per-page ErrorBoundary with retry and friendly fallback; 5 tests pass. Follow-up: lessons/stepCap.
+2026-11-06 | T034 | Seeded RNG + runModuleChecks harness (20 seeded cases, step/codeLine/answer checks); 10 tests pass. Follow-up: lessons/stepCap.
