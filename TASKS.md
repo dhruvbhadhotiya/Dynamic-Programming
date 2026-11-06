@@ -87,10 +87,10 @@ Gate 2: full suite and build pass; flagship route works from static build.
 - [x] T126 | src/problems/strings/shortest-common-supersequence.problem.ts, src/problems/strings/shortest-common-supersequence.problem.test.ts | Shortest Common Supersequence.
 - [x] T127 | src/lessons/strings.lesson.ts | Strings lesson with animated alignment.
 ### 3d Grid
-- [ ] T130 | src/problems/grid/unique-paths.problem.ts, src/problems/grid/unique-paths.problem.test.ts | Unique Paths.
-- [ ] T131 | src/problems/grid/unique-paths-ii.problem.ts, src/problems/grid/unique-paths-ii.problem.test.ts | Unique Paths with Obstacles.
-- [ ] T132 | src/problems/grid/min-path-sum.problem.ts, src/problems/grid/min-path-sum.problem.test.ts | Minimum Path Sum.
-- [ ] T133 | src/problems/grid/triangle.problem.ts, src/problems/grid/triangle.problem.test.ts | Triangle.
+- [x] T130 | src/problems/grid/unique-paths.problem.ts, src/problems/grid/unique-paths.problem.test.ts | Unique Paths.
+- [x] T131 | src/problems/grid/unique-paths-ii.problem.ts, src/problems/grid/unique-paths-ii.problem.test.ts | Unique Paths with Obstacles.
+- [x] T132 | src/problems/grid/min-path-sum.problem.ts, src/problems/grid/min-path-sum.problem.test.ts | Minimum Path Sum.
+- [x] T133 | src/problems/grid/triangle.problem.ts, src/problems/grid/triangle.problem.test.ts | Triangle.
 - [ ] T134 | src/problems/grid/maximal-square.problem.ts, src/problems/grid/maximal-square.problem.test.ts | Maximal Square.
 - [ ] T135 | src/problems/grid/dungeon-game.problem.ts, src/problems/grid/dungeon-game.problem.test.ts | Dungeon Game.
 - [ ] T136 | src/lessons/grid.lesson.ts | Grid DP lesson with animated path.

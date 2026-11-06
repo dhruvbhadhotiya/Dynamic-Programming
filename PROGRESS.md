@@ -62,3 +62,7 @@
 2026-11-06 | T125 | Wildcard Matching module; 6 tests pass.
 2026-11-06 | T126 | Shortest Common Supersequence module; 7 tests pass.
 2026-11-06 | T127 | String DP lesson with LCS alignment diagram; validation clean. Strings category complete.
+2026-11-06 | T130 | Unique Paths module; 6 tests pass.
+2026-11-06 | T131 | Unique Paths II module; 6 tests pass.
+2026-11-06 | T132 | Minimum Path Sum module; 6 tests pass.
+2026-11-06 | T133 | Triangle module (rectangular-safe padded input); 6 tests pass.
