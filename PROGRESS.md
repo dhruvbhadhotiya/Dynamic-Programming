@@ -49,3 +49,7 @@
 2026-11-06 | T111 | Subset Sum module; 6 tests pass.
 2026-11-06 | T112 | Partition Equal Subset Sum module; 7 tests pass.
 2026-11-06 | T118 | Knapsack lesson with item×capacity diagram; validation clean.
+2026-11-06 | T113 | Target Sum module; 6 tests pass.
+2026-11-06 | T114 | Unbounded Knapsack module; 7 tests pass.
+2026-11-06 | T115 | Coin Change (min coins) module; 6 tests pass.
+2026-11-06 | T116 | Coin Change II (ways) module; 6 tests pass.

@@ -71,10 +71,10 @@ Gate 2: full suite and build pass; flagship route works from static build.
 - [x] T110 | src/problems/knapsack/zero-one-knapsack.problem.ts, src/problems/knapsack/zero-one-knapsack.problem.test.ts | 0/1 Knapsack.
 - [x] T111 | src/problems/knapsack/subset-sum.problem.ts, src/problems/knapsack/subset-sum.problem.test.ts | Subset Sum.
 - [x] T112 | src/problems/knapsack/partition-equal-subset.problem.ts, src/problems/knapsack/partition-equal-subset.problem.test.ts | Partition Equal Subset Sum.
-- [ ] T113 | src/problems/knapsack/target-sum.problem.ts, src/problems/knapsack/target-sum.problem.test.ts | Target Sum.
-- [ ] T114 | src/problems/knapsack/unbounded-knapsack.problem.ts, src/problems/knapsack/unbounded-knapsack.problem.test.ts | Unbounded Knapsack.
-- [ ] T115 | src/problems/knapsack/coin-change.problem.ts, src/problems/knapsack/coin-change.problem.test.ts | Coin Change (min coins).
-- [ ] T116 | src/problems/knapsack/coin-change-ii.problem.ts, src/problems/knapsack/coin-change-ii.problem.test.ts | Coin Change II (ways).
+- [x] T113 | src/problems/knapsack/target-sum.problem.ts, src/problems/knapsack/target-sum.problem.test.ts | Target Sum.
+- [x] T114 | src/problems/knapsack/unbounded-knapsack.problem.ts, src/problems/knapsack/unbounded-knapsack.problem.test.ts | Unbounded Knapsack.
+- [x] T115 | src/problems/knapsack/coin-change.problem.ts, src/problems/knapsack/coin-change.problem.test.ts | Coin Change (min coins).
+- [x] T116 | src/problems/knapsack/coin-change-ii.problem.ts, src/problems/knapsack/coin-change-ii.problem.test.ts | Coin Change II (ways).
 - [ ] T117 | src/problems/knapsack/rod-cutting.problem.ts, src/problems/knapsack/rod-cutting.problem.test.ts | Rod Cutting.
 - [x] T118 | src/lessons/knapsack.lesson.ts | Knapsack lesson with animated capacity row.
 ### 3c Strings
