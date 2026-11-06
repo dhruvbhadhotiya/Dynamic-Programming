@@ -53,3 +53,7 @@
 2026-11-06 | T114 | Unbounded Knapsack module; 7 tests pass.
 2026-11-06 | T115 | Coin Change (min coins) module; 6 tests pass.
 2026-11-06 | T116 | Coin Change II (ways) module; 6 tests pass.
+2026-11-06 | T117 | Rod Cutting module; 6 tests pass. Knapsack category complete.
+2026-11-06 | T120 | LCS module (stringAlign); 6 tests pass.
+2026-11-06 | T121 | Longest Common Substring module; 6 tests pass.
+2026-11-06 | T122 | Longest Palindromic Subsequence module; 6 tests pass.

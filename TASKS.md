@@ -75,12 +75,12 @@ Gate 2: full suite and build pass; flagship route works from static build.
 - [x] T114 | src/problems/knapsack/unbounded-knapsack.problem.ts, src/problems/knapsack/unbounded-knapsack.problem.test.ts | Unbounded Knapsack.
 - [x] T115 | src/problems/knapsack/coin-change.problem.ts, src/problems/knapsack/coin-change.problem.test.ts | Coin Change (min coins).
 - [x] T116 | src/problems/knapsack/coin-change-ii.problem.ts, src/problems/knapsack/coin-change-ii.problem.test.ts | Coin Change II (ways).
-- [ ] T117 | src/problems/knapsack/rod-cutting.problem.ts, src/problems/knapsack/rod-cutting.problem.test.ts | Rod Cutting.
+- [x] T117 | src/problems/knapsack/rod-cutting.problem.ts, src/problems/knapsack/rod-cutting.problem.test.ts | Rod Cutting.
 - [x] T118 | src/lessons/knapsack.lesson.ts | Knapsack lesson with animated capacity row.
 ### 3c Strings
-- [ ] T120 | src/problems/strings/lcs.problem.ts, src/problems/strings/lcs.problem.test.ts | Longest Common Subsequence.
-- [ ] T121 | src/problems/strings/longest-common-substring.problem.ts, src/problems/strings/longest-common-substring.problem.test.ts | Longest Common Substring.
-- [ ] T122 | src/problems/strings/longest-palindromic-subsequence.problem.ts, src/problems/strings/longest-palindromic-subsequence.problem.test.ts | Longest Palindromic Subsequence.
+- [x] T120 | src/problems/strings/lcs.problem.ts, src/problems/strings/lcs.problem.test.ts | Longest Common Subsequence.
+- [x] T121 | src/problems/strings/longest-common-substring.problem.ts, src/problems/strings/longest-common-substring.problem.test.ts | Longest Common Substring.
+- [x] T122 | src/problems/strings/longest-palindromic-subsequence.problem.ts, src/problems/strings/longest-palindromic-subsequence.problem.test.ts | Longest Palindromic Subsequence.
 - [ ] T123 | src/problems/strings/edit-distance.problem.ts, src/problems/strings/edit-distance.problem.test.ts | Edit Distance.
 - [ ] T124 | src/problems/strings/distinct-subsequences.problem.ts, src/problems/strings/distinct-subsequences.problem.test.ts | Distinct Subsequences.
 - [ ] T125 | src/problems/strings/wildcard-matching.problem.ts, src/problems/strings/wildcard-matching.problem.test.ts | Wildcard Matching.
