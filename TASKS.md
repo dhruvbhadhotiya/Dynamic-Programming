@@ -25,7 +25,7 @@ Gate 0: `npm run typecheck && npm run lint && npm test && npm run build` pass; c
 - [x] T018 | src/components/CodePanel.tsx, src/components/CodePanel.test.tsx, src/types/prism.d.ts | Prism-powered Python/JS/C++ tabs, live line highlight, copy.
 - [x] T019 | src/components/InfoPanels.tsx, src/components/InfoPanels.test.tsx | VariableWatch, ExplanationBar, StepCounter.
 - [x] T020 | src/components/InputForm.tsx, src/components/InputForm.test.tsx, src/engine/inputValidation.ts, src/engine/inputValidation.test.ts | Schema-driven inputs, validation, size limits, randomize.
-- [ ] T021 | src/components/ModeToggle.tsx, src/components/ModeToggle.test.tsx | Brute/memo/tabulation toggle + live operation counter.
+- [x] T021 | src/components/ModeToggle.tsx, src/components/ModeToggle.test.tsx | Brute/memo/tabulation toggle + live operation counter.
 - [ ] T022 | src/components/PredictMode.tsx, src/components/PredictMode.test.tsx | Next-cell prediction, hints, score, keyboard entry.
 - [ ] T023 | src/components/QuizEngine.tsx, src/components/QuizEngine.test.tsx | Quiz flow, explanations, localStorage score.
 - [ ] T024 | src/engine/registry.ts, src/engine/registry.test.ts | import.meta.glob auto-registration, validation, category metadata.
