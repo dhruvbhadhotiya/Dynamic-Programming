@@ -1,3 +1,148 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --canvas: 248 250 252;
+    --surface: 255 255 255;
+    --ink: 30 27 75;
+    --muted: 71 85 105;
+    --line: 226 232 240;
+    --brand: 79 70 229;
+    --accent: 234 88 12;
+    --good: 5 150 105;
+    --warn: 217 119 6;
+    --bad: 220 38 38;
+  }
+
+  .dark {
+    --canvas: 9 14 28;
+    --surface: 20 28 47;
+    --ink: 241 245 249;
+    --muted: 148 163 184;
+    --line: 51 65 85;
+    --brand: 129 140 248;
+    --accent: 251 146 60;
+    --good: 52 211 153;
+    --warn: 251 191 36;
+    --bad: 248 113 113;
+  }
+
+  * {
+    border-color: rgb(var(--line));
+  }
+
+  html {
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-canvas font-sans text-ink antialiased;
+    min-width: 320px;
+    min-height: 100vh;
+  }
+
+  ::selection {
+    background: rgb(var(--brand) / 0.22);
+  }
+
+  :focus-visible {
+    outline: 3px solid rgb(var(--accent));
+    outline-offset: 3px;
+  }
+
+  code,
+  pre,
+  kbd {
+    @apply font-mono;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-2xl border border-line bg-surface shadow-sm;
+  }
+
+  .btn {
+    @apply inline-flex min-h-11 cursor-pointer items-center justify-center gap-2 rounded-xl px-4 py-2 text-sm font-bold transition-colors disabled:cursor-not-allowed disabled:opacity-45;
+  }
+
+  .btn-primary {
+    @apply btn bg-brand text-canvas hover:brightness-110;
+  }
+
+  .btn-secondary {
+    @apply btn border border-line bg-surface text-ink hover:border-brand hover:text-brand;
+  }
+
+  .btn-ghost {
+    @apply btn text-muted hover:bg-surface hover:text-ink;
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-line bg-surface px-2.5 py-1 text-xs font-semibold text-muted;
+  }
+
+  .field {
+    @apply min-h-11 w-full rounded-xl border border-line bg-canvas px-3 py-2 text-sm text-ink outline-none transition-colors placeholder:text-muted/70 focus:border-brand;
+  }
+
+  .label {
+    @apply mb-1.5 block text-sm font-semibold text-ink;
+  }
+
+  .kbd {
+    @apply inline-flex min-w-6 items-center justify-center rounded-md border border-line bg-canvas px-1.5 py-0.5 text-[11px] font-semibold text-muted;
+  }
+
+  .prose-dp {
+    @apply text-[1.05rem] leading-7 text-muted;
+  }
+
+  .prose-dp strong {
+    @apply text-ink;
+  }
+
+  .prose-dp code {
+    @apply rounded bg-line/50 px-1 py-0.5 text-[0.9em] text-ink;
+  }
+
+  .skip-link {
+    @apply sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-xl focus:bg-brand focus:px-4 focus:py-3 focus:font-bold focus:text-canvas;
+  }
+}
+
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  header,
+  footer,
+  nav,
+  .no-print {
+    display: none !important;
+  }
+
+  .card {
+    break-inside: avoid;
+    box-shadow: none !important;
+  }
+}

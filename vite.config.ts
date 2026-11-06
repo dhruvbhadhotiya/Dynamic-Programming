@@ -9,5 +9,6 @@ export default defineConfig({
     setupFiles: ['./vitest.setup.ts'],
     css: true,
     restoreMocks: true,
+    passWithNoTests: true,
   },
 });

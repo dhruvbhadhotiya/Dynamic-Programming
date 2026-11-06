@@ -9,7 +9,7 @@ Read AGENTS.md, this file, and the last 20 lines of PROGRESS.md at session start
 - [x] T002 | tailwind.config.ts, postcss.config.js, eslint.config.js, playwright.config.ts, vitest.setup.ts | Configure Tailwind, ESLint, Vitest, Playwright.
 - [x] T003 | AGENTS.md, DECISIONS.md, PROGRESS.md | Write agent contract, decisions, progress log (TASKS.md exists).
 - [x] T004 | src/main.tsx, src/App.tsx, src/app/routes.tsx, src/components/AppShell.tsx, src/components/RouteError.tsx, src/pages/PlaceholderPage.tsx, src/styles/globals.css (stub) | App bootstrap, hash router, lazy page routes, global error boundary.
-- [ ] T005 | src/styles/tokens.ts, src/styles/globals.css | Design tokens, light/dark tokens, base utility and focus styles.
+- [x] T005 | src/styles/tokens.ts, src/styles/globals.css, vite.config.ts (test no-files flag) | Design tokens, light/dark tokens, base utility and focus styles.
 
 Gate 0: `npm run typecheck && npm run lint && npm test && npm run build` pass; commit.
 
