@@ -61,10 +61,10 @@ Gate 2: full suite and build pass; flagship route works from static build.
 - [x] T101 | src/problems/1d/house-robber.problem.ts, src/problems/1d/house-robber.problem.test.ts | House Robber.
 - [x] T102 | src/problems/1d/house-robber-ii.problem.ts, src/problems/1d/house-robber-ii.problem.test.ts | House Robber II.
 - [x] T103 | src/problems/1d/min-cost-climbing-stairs.problem.ts, src/problems/1d/min-cost-climbing-stairs.problem.test.ts | Min Cost Climbing Stairs.
-- [ ] T104 | src/problems/1d/decode-ways.problem.ts, src/problems/1d/decode-ways.problem.test.ts | Decode Ways.
-- [ ] T105 | src/problems/1d/kadane.problem.ts, src/problems/1d/kadane.problem.test.ts | Maximum Subarray (Kadane).
-- [ ] T106 | src/problems/1d/jump-game.problem.ts, src/problems/1d/jump-game.problem.test.ts | Jump Game.
-- [ ] T107 | src/problems/1d/lis-quadratic.problem.ts, src/problems/1d/lis-quadratic.problem.test.ts | Longest Increasing Subsequence O(n²).
+- [x] T104 | src/problems/1d/decode-ways.problem.ts, src/problems/1d/decode-ways.problem.test.ts | Decode Ways.
+- [x] T105 | src/problems/1d/kadane.problem.ts, src/problems/1d/kadane.problem.test.ts | Maximum Subarray (Kadane).
+- [x] T106 | src/problems/1d/jump-game.problem.ts, src/problems/1d/jump-game.problem.test.ts | Jump Game.
+- [x] T107 | src/problems/1d/lis-quadratic.problem.ts, src/problems/1d/lis-quadratic.problem.test.ts | Longest Increasing Subsequence O(n²).
 - [ ] T108 | src/problems/1d/lis-binary.problem.ts, src/problems/1d/lis-binary.problem.test.ts | Longest Increasing Subsequence O(n log n).
 - [ ] T109 | src/lessons/1d.lesson.ts | 1D DP lesson with animated stairs diagram.
 ### 3b Knapsack

@@ -39,3 +39,7 @@
 2026-11-06 | T101 | House Robber module; 7 tests pass.
 2026-11-06 | T102 | House Robber II (circle via two linear passes); 8 tests pass.
 2026-11-06 | T103 | Min Cost Climbing Stairs module; 7 tests pass.
+2026-11-06 | T104 | Decode Ways module; 7 tests pass.
+2026-11-06 | T105 | Maximum Subarray (Kadane) module; 7 tests pass.
+2026-11-06 | T106 | Jump Game module; 7 tests pass.
+2026-11-06 | T107 | LIS O(n²) module; 7 tests pass.
