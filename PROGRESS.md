@@ -8,3 +8,4 @@
 2026-11-06 | T010 | Engine contracts for steps, inputs, eight renderer states, modules; type guards tested. Follow-up: StepRecorder (T011).
 2026-11-06 | T011 | Immutable table StepRecorder with fill/update/read, table helpers, final-answer extractor; 5 tests pass. Follow-up: player store (T012).
 2026-11-06 | T012 | Zustand player with bounded playback, speed scale, keyboard shortcuts; 5 tests pass. Follow-up: controls UI (T013).
+2026-11-06 | T013 | Transport controls with scrubber, speed, auto-advance; 3 tests pass; global RTL cleanup added. Follow-up: engine renderers.
