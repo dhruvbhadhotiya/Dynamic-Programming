@@ -57,3 +57,7 @@
 2026-11-06 | T120 | LCS module (stringAlign); 6 tests pass.
 2026-11-06 | T121 | Longest Common Substring module; 6 tests pass.
 2026-11-06 | T122 | Longest Palindromic Subsequence module; 6 tests pass.
+2026-11-06 | T123 | Edit Distance module; 6 tests pass.
+2026-11-06 | T124 | Distinct Subsequences module; 6 tests pass.
+2026-11-06 | T125 | Wildcard Matching module; 6 tests pass.
+2026-11-06 | T126 | Shortest Common Supersequence module; 7 tests pass.

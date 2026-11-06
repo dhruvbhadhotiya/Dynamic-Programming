@@ -81,10 +81,10 @@ Gate 2: full suite and build pass; flagship route works from static build.
 - [x] T120 | src/problems/strings/lcs.problem.ts, src/problems/strings/lcs.problem.test.ts | Longest Common Subsequence.
 - [x] T121 | src/problems/strings/longest-common-substring.problem.ts, src/problems/strings/longest-common-substring.problem.test.ts | Longest Common Substring.
 - [x] T122 | src/problems/strings/longest-palindromic-subsequence.problem.ts, src/problems/strings/longest-palindromic-subsequence.problem.test.ts | Longest Palindromic Subsequence.
-- [ ] T123 | src/problems/strings/edit-distance.problem.ts, src/problems/strings/edit-distance.problem.test.ts | Edit Distance.
-- [ ] T124 | src/problems/strings/distinct-subsequences.problem.ts, src/problems/strings/distinct-subsequences.problem.test.ts | Distinct Subsequences.
-- [ ] T125 | src/problems/strings/wildcard-matching.problem.ts, src/problems/strings/wildcard-matching.problem.test.ts | Wildcard Matching.
-- [ ] T126 | src/problems/strings/shortest-common-supersequence.problem.ts, src/problems/strings/shortest-common-supersequence.problem.test.ts | Shortest Common Supersequence.
+- [x] T123 | src/problems/strings/edit-distance.problem.ts, src/problems/strings/edit-distance.problem.test.ts | Edit Distance.
+- [x] T124 | src/problems/strings/distinct-subsequences.problem.ts, src/problems/strings/distinct-subsequences.problem.test.ts | Distinct Subsequences.
+- [x] T125 | src/problems/strings/wildcard-matching.problem.ts, src/problems/strings/wildcard-matching.problem.test.ts | Wildcard Matching.
+- [x] T126 | src/problems/strings/shortest-common-supersequence.problem.ts, src/problems/strings/shortest-common-supersequence.problem.test.ts | Shortest Common Supersequence.
 - [ ] T127 | src/lessons/strings.lesson.ts | Strings lesson with animated alignment.
 ### 3d Grid
 - [ ] T130 | src/problems/grid/unique-paths.problem.ts, src/problems/grid/unique-paths.problem.test.ts | Unique Paths.
