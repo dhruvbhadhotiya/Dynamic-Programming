@@ -18,3 +18,7 @@
 2026-11-06 | T020 | Schema-driven input form with inline validation, randomize, revert; 8 tests pass; typecheck + lint clean. Follow-up: ModeToggle (T021).
 2026-11-06 | T021 | Mode toggle with arrow-key navigation, teaching hint, live operation counter; 4 tests pass. Follow-up: PredictMode (T022).
 2026-11-06 | T022 | Prediction panel with keyboard answer entry, hints, scored feedback and reset-per-question; 5 tests pass. Follow-up: QuizEngine (T023).
+2026-11-06 | T023 | QuizEngine with per-question explanations and localStorage score; 9 tests pass. Follow-up: ProblemPage (T025).
+2026-11-06 | T024 | Module registry with import.meta.glob auto-load, validation, category metadata; 13 tests pass. Follow-up: ProblemPage (T025).
+2026-11-06 | T027 | Teacher mode store + toolbar (hide code, font scale, fullscreen); 5 tests pass. Follow-up: AppShell wiring.
+2026-11-06 | T029 | SVG DAG renderer with path/dependency edge highlighting and a11y fallback; 6 tests pass. Follow-up: bitmask/interval/tree renderers.

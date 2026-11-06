@@ -27,13 +27,13 @@ Gate 0: `npm run typecheck && npm run lint && npm test && npm run build` pass; c
 - [x] T020 | src/components/InputForm.tsx, src/components/InputForm.test.tsx, src/engine/inputValidation.ts, src/engine/inputValidation.test.ts | Schema-driven inputs, validation, size limits, randomize.
 - [x] T021 | src/components/ModeToggle.tsx, src/components/ModeToggle.test.tsx | Brute/memo/tabulation toggle + live operation counter.
 - [x] T022 | src/components/PredictMode.tsx, src/components/PredictMode.test.tsx | Next-cell prediction, hints, score, keyboard entry.
-- [ ] T023 | src/components/QuizEngine.tsx, src/components/QuizEngine.test.tsx | Quiz flow, explanations, localStorage score.
-- [ ] T024 | src/engine/registry.ts, src/engine/registry.test.ts | import.meta.glob auto-registration, validation, category metadata.
+- [x] T023 | src/components/QuizEngine.tsx, src/components/QuizEngine.test.tsx | Quiz flow, explanations, localStorage score.
+- [x] T024 | src/engine/registry.ts, src/engine/registry.test.ts | import.meta.glob auto-registration, validation, category metadata.
 - [ ] T025 | src/pages/ProblemPage.tsx, src/pages/ProblemPage.test.tsx | Generic problem page assembling engine; handles modes/input/predict/quiz.
 - [ ] T026 | src/pages/HomePage.tsx, src/pages/HomePage.test.tsx | Roadmap, search/filter, saved progress, teacher entry.
-- [ ] T027 | src/engine/teacherMode.ts, src/components/TeacherBar.tsx, src/engine/teacherMode.test.ts | Teacher mode: large fonts, hide code, fullscreen.
+- [x] T027 | src/engine/teacherMode.ts, src/components/TeacherBar.tsx, src/engine/teacherMode.test.ts | Teacher mode: large fonts, hide code, fullscreen.
 - [ ] T028 | src/pages/CheatSheetPage.tsx, src/pages/CheatSheetPage.test.tsx | Printable cheat sheet from module metadata.
-- [ ] T029 | src/renderers/DagGraph.tsx, src/renderers/DagGraph.test.tsx | DAG renderer with shortest/longest path highlighting.
+- [x] T029 | src/renderers/DagGraph.tsx, src/renderers/DagGraph.test.tsx | DAG renderer with shortest/longest path highlighting.
 - [ ] T030 | src/renderers/BitmaskGrid.tsx, src/renderers/BitmaskGrid.test.tsx | Bitmask/subsets renderer.
 - [ ] T031 | src/renderers/IntervalTriangle.tsx, src/renderers/IntervalTriangle.test.tsx | Interval DP triangle renderer.
 - [ ] T032 | src/renderers/TreeDP.tsx, src/renderers/TreeDP.test.tsx | Tree DP renderer with per-node state.
