@@ -66,3 +66,6 @@
 2026-11-06 | T131 | Unique Paths II module; 6 tests pass.
 2026-11-06 | T132 | Minimum Path Sum module; 6 tests pass.
 2026-11-06 | T133 | Triangle module (rectangular-safe padded input); 6 tests pass.
+2026-11-06 | T134 | Maximal Square module; 6 tests pass.
+2026-11-06 | T135 | Dungeon Game module; 6 tests pass.
+2026-11-06 | T136 | Grid DP lesson with min-path diagram; validation clean. Grid category complete.
