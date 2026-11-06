@@ -99,9 +99,9 @@ Gate 2: full suite and build pass; flagship route works from static build.
 - [x] T141 | src/problems/stocks/stock-ii.problem.ts, src/problems/stocks/stock-ii.problem.test.ts | Stock II.
 - [x] T142 | src/problems/stocks/stock-iii.problem.ts, src/problems/stocks/stock-iii.problem.test.ts | Stock III.
 - [x] T143 | src/problems/stocks/stock-iv.problem.ts, src/problems/stocks/stock-iv.problem.test.ts | Stock IV.
-- [ ] T144 | src/problems/stocks/stock-cooldown.problem.ts, src/problems/stocks/stock-cooldown.problem.test.ts | Stock with Cooldown.
-- [ ] T145 | src/problems/stocks/stock-fee.problem.ts, src/problems/stocks/stock-fee.problem.test.ts | Stock with Transaction Fee.
-- [ ] T146 | src/lessons/stocks.lesson.ts | State-machine lesson with animated states.
+- [x] T144 | src/problems/stocks/stock-cooldown.problem.ts, src/problems/stocks/stock-cooldown.problem.test.ts | Stock with Cooldown.
+- [x] T145 | src/problems/stocks/stock-fee.problem.ts, src/problems/stocks/stock-fee.problem.test.ts | Stock with Transaction Fee.
+- [x] T146 | src/lessons/stocks.lesson.ts | State-machine lesson with animated states.
 ### 3f Intervals
 - [ ] T150 | src/problems/intervals/matrix-chain.problem.ts, src/problems/intervals/matrix-chain.problem.test.ts | Matrix Chain Multiplication.
 - [ ] T151 | src/problems/intervals/burst-balloons.problem.ts, src/problems/intervals/burst-balloons.problem.test.ts | Burst Balloons.

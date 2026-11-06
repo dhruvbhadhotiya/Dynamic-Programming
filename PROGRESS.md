@@ -73,3 +73,6 @@
 2026-11-06 | T141 | Stock II module; 6 tests pass.
 2026-11-06 | T142 | Stock III module; 6 tests pass.
 2026-11-06 | T143 | Stock IV (max k transactions) module; 6 tests pass.
+2026-11-06 | T144 | Stock with Cooldown module; 6 tests pass.
+2026-11-06 | T145 | Stock with Transaction Fee module; 6 tests pass.
+2026-11-06 | T146 | Stock state-machine lesson with cooldown diagram; validation clean. Stocks category complete.
