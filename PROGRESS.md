@@ -45,3 +45,7 @@
 2026-11-06 | T107 | LIS O(n²) module; 7 tests pass.
 2026-11-06 | T108 | LIS O(n log n) (tails/patience) module; 6 tests pass. 1D category complete.
 2026-11-06 | T109 | 1D DP lesson with tabulation diagram; registry validation clean.
+2026-11-06 | T110 | 0/1 Knapsack (table2d) module; 7 tests pass.
+2026-11-06 | T111 | Subset Sum module; 6 tests pass.
+2026-11-06 | T112 | Partition Equal Subset Sum module; 7 tests pass.
+2026-11-06 | T118 | Knapsack lesson with item×capacity diagram; validation clean.

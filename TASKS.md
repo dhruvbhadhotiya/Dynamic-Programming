@@ -68,15 +68,15 @@ Gate 2: full suite and build pass; flagship route works from static build.
 - [x] T108 | src/problems/1d/lis-binary.problem.ts, src/problems/1d/lis-binary.problem.test.ts | Longest Increasing Subsequence O(n log n).
 - [x] T109 | src/lessons/1d.lesson.ts | 1D DP lesson with animated stairs diagram.
 ### 3b Knapsack
-- [ ] T110 | src/problems/knapsack/zero-one-knapsack.problem.ts, src/problems/knapsack/zero-one-knapsack.problem.test.ts | 0/1 Knapsack.
-- [ ] T111 | src/problems/knapsack/subset-sum.problem.ts, src/problems/knapsack/subset-sum.problem.test.ts | Subset Sum.
-- [ ] T112 | src/problems/knapsack/partition-equal-subset.problem.ts, src/problems/knapsack/partition-equal-subset.problem.test.ts | Partition Equal Subset Sum.
+- [x] T110 | src/problems/knapsack/zero-one-knapsack.problem.ts, src/problems/knapsack/zero-one-knapsack.problem.test.ts | 0/1 Knapsack.
+- [x] T111 | src/problems/knapsack/subset-sum.problem.ts, src/problems/knapsack/subset-sum.problem.test.ts | Subset Sum.
+- [x] T112 | src/problems/knapsack/partition-equal-subset.problem.ts, src/problems/knapsack/partition-equal-subset.problem.test.ts | Partition Equal Subset Sum.
 - [ ] T113 | src/problems/knapsack/target-sum.problem.ts, src/problems/knapsack/target-sum.problem.test.ts | Target Sum.
 - [ ] T114 | src/problems/knapsack/unbounded-knapsack.problem.ts, src/problems/knapsack/unbounded-knapsack.problem.test.ts | Unbounded Knapsack.
 - [ ] T115 | src/problems/knapsack/coin-change.problem.ts, src/problems/knapsack/coin-change.problem.test.ts | Coin Change (min coins).
 - [ ] T116 | src/problems/knapsack/coin-change-ii.problem.ts, src/problems/knapsack/coin-change-ii.problem.test.ts | Coin Change II (ways).
 - [ ] T117 | src/problems/knapsack/rod-cutting.problem.ts, src/problems/knapsack/rod-cutting.problem.test.ts | Rod Cutting.
-- [ ] T118 | src/lessons/knapsack.lesson.ts | Knapsack lesson with animated capacity row.
+- [x] T118 | src/lessons/knapsack.lesson.ts | Knapsack lesson with animated capacity row.
 ### 3c Strings
 - [ ] T120 | src/problems/strings/lcs.problem.ts, src/problems/strings/lcs.problem.test.ts | Longest Common Subsequence.
 - [ ] T121 | src/problems/strings/longest-common-substring.problem.ts, src/problems/strings/longest-common-substring.problem.test.ts | Longest Common Substring.
