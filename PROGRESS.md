@@ -30,3 +30,5 @@
 2026-11-06 | T032 | TreeDP renderer with per-node state chips and kind badges; 8 tests pass. Follow-up: lessons/stepCap.
 2026-11-06 | T033 | Per-page ErrorBoundary with retry and friendly fallback; 5 tests pass. Follow-up: lessons/stepCap.
 2026-11-06 | T034 | Seeded RNG + runModuleChecks harness (20 seeded cases, step/codeLine/answer checks); 10 tests pass. Follow-up: lessons/stepCap.
+2026-11-06 | T035 | Lesson data model + LessonPage with animated diagram playback; 7 tests pass. Stage 1 complete.
+2026-11-06 | T036 | capSteps with explicit truncation step preserving the answer; 10 tests pass. Gate 1 PASS.

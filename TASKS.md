@@ -39,8 +39,10 @@ Gate 0: `npm run typecheck && npm run lint && npm test && npm run build` pass; c
 - [x] T032 | src/renderers/TreeDP.tsx, src/renderers/TreeDP.test.tsx | Tree DP renderer with per-node state.
 - [x] T033 | src/components/ErrorBoundary.tsx, src/components/ErrorBoundary.test.tsx | Per-page error boundary and friendly fallback.
 - [x] T034 | src/engine/testUtils.ts, src/engine/random.ts, src/engine/random.test.ts | Seeded RNG, random-case helper, independent reference harness for module tests.
-- [ ] T035 | src/engine/lessonTypes.ts, src/pages/LessonPage.tsx, src/pages/LessonPage.test.tsx | Lesson data model and generic lesson page with animated diagram.
-- [ ] T036 | src/engine/stepCap.ts, src/engine/stepCap.test.ts | Cap huge step lists with explicit truncation step; no silent loss.
+- [x] T035 | src/engine/lessonTypes.ts, src/pages/LessonPage.tsx, src/pages/LessonPage.test.tsx | Lesson data model and generic lesson page with animated diagram.
+- [x] T036 | src/engine/stepCap.ts, src/engine/stepCap.test.ts | Cap huge step lists with explicit truncation step; no silent loss.
+
+Gate 1: PASS — typecheck + lint + 165 tests + build green (2026-11-06).
 
 Gate 1: build, typecheck, lint, all engine tests pass; no `any`/ts-ignore.
 
