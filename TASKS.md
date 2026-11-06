@@ -65,8 +65,8 @@ Gate 2: full suite and build pass; flagship route works from static build.
 - [x] T105 | src/problems/1d/kadane.problem.ts, src/problems/1d/kadane.problem.test.ts | Maximum Subarray (Kadane).
 - [x] T106 | src/problems/1d/jump-game.problem.ts, src/problems/1d/jump-game.problem.test.ts | Jump Game.
 - [x] T107 | src/problems/1d/lis-quadratic.problem.ts, src/problems/1d/lis-quadratic.problem.test.ts | Longest Increasing Subsequence O(n²).
-- [ ] T108 | src/problems/1d/lis-binary.problem.ts, src/problems/1d/lis-binary.problem.test.ts | Longest Increasing Subsequence O(n log n).
-- [ ] T109 | src/lessons/1d.lesson.ts | 1D DP lesson with animated stairs diagram.
+- [x] T108 | src/problems/1d/lis-binary.problem.ts, src/problems/1d/lis-binary.problem.test.ts | Longest Increasing Subsequence O(n log n).
+- [x] T109 | src/lessons/1d.lesson.ts | 1D DP lesson with animated stairs diagram.
 ### 3b Knapsack
 - [ ] T110 | src/problems/knapsack/zero-one-knapsack.problem.ts, src/problems/knapsack/zero-one-knapsack.problem.test.ts | 0/1 Knapsack.
 - [ ] T111 | src/problems/knapsack/subset-sum.problem.ts, src/problems/knapsack/subset-sum.problem.test.ts | Subset Sum.

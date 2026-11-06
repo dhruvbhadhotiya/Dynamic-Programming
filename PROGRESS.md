@@ -43,3 +43,5 @@
 2026-11-06 | T105 | Maximum Subarray (Kadane) module; 7 tests pass.
 2026-11-06 | T106 | Jump Game module; 7 tests pass.
 2026-11-06 | T107 | LIS O(n²) module; 7 tests pass.
+2026-11-06 | T108 | LIS O(n log n) (tails/patience) module; 6 tests pass. 1D category complete.
+2026-11-06 | T109 | 1D DP lesson with tabulation diagram; registry validation clean.
