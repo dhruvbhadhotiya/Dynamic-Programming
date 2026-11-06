@@ -29,12 +29,12 @@ Gate 0: `npm run typecheck && npm run lint && npm test && npm run build` pass; c
 - [x] T022 | src/components/PredictMode.tsx, src/components/PredictMode.test.tsx | Next-cell prediction, hints, score, keyboard entry.
 - [x] T023 | src/components/QuizEngine.tsx, src/components/QuizEngine.test.tsx | Quiz flow, explanations, localStorage score.
 - [x] T024 | src/engine/registry.ts, src/engine/registry.test.ts | import.meta.glob auto-registration, validation, category metadata.
-- [ ] T025 | src/pages/ProblemPage.tsx, src/pages/ProblemPage.test.tsx | Generic problem page assembling engine; handles modes/input/predict/quiz.
-- [ ] T026 | src/pages/HomePage.tsx, src/pages/HomePage.test.tsx | Roadmap, search/filter, saved progress, teacher entry.
+- [x] T025 | src/pages/ProblemPage.tsx, src/pages/ProblemPage.test.tsx | Generic problem page assembling engine; handles modes/input/predict/quiz.
+- [x] T026 | src/pages/HomePage.tsx, src/pages/HomePage.test.tsx | Roadmap, search/filter, saved progress, teacher entry.
 - [x] T027 | src/engine/teacherMode.ts, src/components/TeacherBar.tsx, src/engine/teacherMode.test.ts | Teacher mode: large fonts, hide code, fullscreen.
-- [ ] T028 | src/pages/CheatSheetPage.tsx, src/pages/CheatSheetPage.test.tsx | Printable cheat sheet from module metadata.
+- [x] T028 | src/pages/CheatSheetPage.tsx, src/pages/CheatSheetPage.test.tsx | Printable cheat sheet from module metadata.
 - [x] T029 | src/renderers/DagGraph.tsx, src/renderers/DagGraph.test.tsx | DAG renderer with shortest/longest path highlighting.
-- [ ] T030 | src/renderers/BitmaskGrid.tsx, src/renderers/BitmaskGrid.test.tsx | Bitmask/subsets renderer.
+- [x] T030 | src/renderers/BitmaskGrid.tsx, src/renderers/BitmaskGrid.test.tsx | Bitmask/subsets renderer.
 - [ ] T031 | src/renderers/IntervalTriangle.tsx, src/renderers/IntervalTriangle.test.tsx | Interval DP triangle renderer.
 - [ ] T032 | src/renderers/TreeDP.tsx, src/renderers/TreeDP.test.tsx | Tree DP renderer with per-node state.
 - [ ] T033 | src/components/ErrorBoundary.tsx, src/components/ErrorBoundary.test.tsx | Per-page error boundary and friendly fallback.

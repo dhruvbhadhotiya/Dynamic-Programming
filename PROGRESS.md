@@ -22,3 +22,7 @@
 2026-11-06 | T024 | Module registry with import.meta.glob auto-load, validation, category metadata; 13 tests pass. Follow-up: ProblemPage (T025).
 2026-11-06 | T027 | Teacher mode store + toolbar (hide code, font scale, fullscreen); 5 tests pass. Follow-up: AppShell wiring.
 2026-11-06 | T029 | SVG DAG renderer with path/dependency edge highlighting and a11y fallback; 6 tests pass. Follow-up: bitmask/interval/tree renderers.
+2026-11-06 | T025 | Generic ProblemPage assembling input/mode/player/renderer/code/predict/quiz from a module; 5 tests pass. Follow-up: flagship Fibonacci (T040).
+2026-11-06 | T026 | HomePage with search/filter, saved-progress totals from localStorage, teacher entry; 7 tests pass. Follow-up: routes/teacher wiring.
+2026-11-06 | T028 | Printable cheat sheet grouped by category with recurrence + complexity tables; 4 tests pass. Follow-up: none.
+2026-11-06 | T030 | Bitmask grid renderer with binary cells, bit legend, compact mode; 9 tests pass. Follow-up: interval/tree renderers.
