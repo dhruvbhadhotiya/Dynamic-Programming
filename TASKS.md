@@ -48,8 +48,10 @@ Gate 1: build, typecheck, lint, all engine tests pass; no `any`/ts-ignore.
 
 ## Stage 2 — Flagship Fibonacci
 - [x] T040 | src/problems/1d/fibonacci.problem.ts, src/problems/1d/fibonacci.problem.test.ts | Fibonacci module: brute tree, memo, tabulation, 3+ quizzes, aligned code.
-- [ ] T041 | src/pages/FibonacciPage.tsx, src/pages/FibonacciPage.test.tsx | Flagship visual story: exponential tree collapsing into linear table, memo vs tabulation.
-- [ ] T042 | src/components/FibonacciLab.tsx, src/components/FibonacciLab.test.tsx | Interactive n slider, operation comparison, auto-play walkthrough.
+- [x] T041 | src/pages/FibonacciPage.tsx, src/pages/FibonacciPage.test.tsx | Flagship visual story: exponential tree collapsing into linear table, memo vs tabulation.
+- [x] T042 | src/components/FibonacciLab.tsx, src/components/FibonacciLab.test.tsx | Interactive n slider, operation comparison, auto-play walkthrough.
+
+Gate 2: PASS — full suite (184 tests) + build green; note: routes still point at placeholders, page wiring deferred to final pass.
 
 Gate 2: full suite and build pass; flagship route works from static build.
 
