@@ -61,3 +61,4 @@
 2026-11-06 | T124 | Distinct Subsequences module; 6 tests pass.
 2026-11-06 | T125 | Wildcard Matching module; 6 tests pass.
 2026-11-06 | T126 | Shortest Common Supersequence module; 7 tests pass.
+2026-11-06 | T127 | String DP lesson with LCS alignment diagram; validation clean. Strings category complete.
