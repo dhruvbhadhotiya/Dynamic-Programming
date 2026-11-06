@@ -14,7 +14,7 @@ Read AGENTS.md, this file, and the last 20 lines of PROGRESS.md at session start
 Gate 0: `npm run typecheck && npm run lint && npm test && npm run build` pass; commit.
 
 ## Stage 1 — Shared Engine
-- [ ] T010 | src/engine/types.ts | Engine types, renderer state contracts, input field schema, step validation helpers.
+- [x] T010 | src/engine/types.ts, src/engine/types.test.ts | Engine types, renderer state contracts, input field schema, step validation helpers.
 - [ ] T011 | src/engine/dpHelpers.ts, src/engine/dpHelpers.test.ts | StepRecorder class, table creation, immutable snapshots, clamp/cap helpers.
 - [ ] T012 | src/engine/usePlayer.ts, src/engine/usePlayer.test.ts | Zustand player: play/pause/step/reset/scrub/speed/keyboard, max steps.
 - [ ] T013 | src/components/PlayerControls.tsx, src/components/PlayerControls.test.tsx | Transport, scrubber, speed 0.25–4x, keyboard hints.

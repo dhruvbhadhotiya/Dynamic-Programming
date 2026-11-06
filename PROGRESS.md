@@ -5,3 +5,4 @@
 2026-11-06 | T003 | Agent contract, architecture, decisions, resumability docs in place. Follow-up: bootstrap/routes (T004).
 2026-11-06 | T004 | Hash-router shell, theme toggle, placeholder routes, route error page; build passes. Follow-up: design tokens (T005).
 2026-11-06 | T005 | Light/dark token system, state colors with symbols, focus/reduced-motion/print styles. Stage 0 gate passes. Follow-up: engine types (T010).
+2026-11-06 | T010 | Engine contracts for steps, inputs, eight renderer states, modules; type guards tested. Follow-up: StepRecorder (T011).
