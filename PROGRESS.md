@@ -10,3 +10,5 @@
 2026-11-06 | T012 | Zustand player with bounded playback, speed scale, keyboard shortcuts; 5 tests pass. Follow-up: controls UI (T013).
 2026-11-06 | T013 | Transport controls with scrubber, speed, auto-advance; 3 tests pass; global RTL cleanup added. Follow-up: engine renderers.
 2026-11-06 | T016 | StringAlign renderer with editable sequence headers, state symbols, caption and accessible cells; 2 tests pass. Follow-up: RecursionTree (T017).
+2026-11-06 | T014 | Accessible 1D table renderer with state symbols, labels and compact mode; 5 tests pass. Follow-up: Table2D (T015).
+2026-11-06 | T019 | Explanation bar, step counter and variable watch with live/progress semantics; 5 tests pass. Follow-up: ProblemPage integration.
