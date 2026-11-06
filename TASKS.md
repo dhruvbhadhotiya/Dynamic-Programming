@@ -57,10 +57,10 @@ Gate 2: full suite and build pass; flagship route works from static build.
 
 ## Stage 3 — Problems And Lessons
 ### 3a 1D DP
-- [ ] T100 | src/problems/1d/climbing-stairs.problem.ts, src/problems/1d/climbing-stairs.problem.test.ts | Climbing Stairs.
-- [ ] T101 | src/problems/1d/house-robber.problem.ts, src/problems/1d/house-robber.problem.test.ts | House Robber.
-- [ ] T102 | src/problems/1d/house-robber-ii.problem.ts, src/problems/1d/house-robber-ii.problem.test.ts | House Robber II.
-- [ ] T103 | src/problems/1d/min-cost-climbing-stairs.problem.ts, src/problems/1d/min-cost-climbing-stairs.problem.test.ts | Min Cost Climbing Stairs.
+- [x] T100 | src/problems/1d/climbing-stairs.problem.ts, src/problems/1d/climbing-stairs.problem.test.ts | Climbing Stairs.
+- [x] T101 | src/problems/1d/house-robber.problem.ts, src/problems/1d/house-robber.problem.test.ts | House Robber.
+- [x] T102 | src/problems/1d/house-robber-ii.problem.ts, src/problems/1d/house-robber-ii.problem.test.ts | House Robber II.
+- [x] T103 | src/problems/1d/min-cost-climbing-stairs.problem.ts, src/problems/1d/min-cost-climbing-stairs.problem.test.ts | Min Cost Climbing Stairs.
 - [ ] T104 | src/problems/1d/decode-ways.problem.ts, src/problems/1d/decode-ways.problem.test.ts | Decode Ways.
 - [ ] T105 | src/problems/1d/kadane.problem.ts, src/problems/1d/kadane.problem.test.ts | Maximum Subarray (Kadane).
 - [ ] T106 | src/problems/1d/jump-game.problem.ts, src/problems/1d/jump-game.problem.test.ts | Jump Game.

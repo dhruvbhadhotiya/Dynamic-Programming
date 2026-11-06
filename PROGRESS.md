@@ -35,3 +35,7 @@
 2026-11-06 | T040 | Flagship Fibonacci module (brute/memo/tabulation, table1d, aligned code, 4 quizzes); 20-seed reference checks pass. Follow-up: FibonacciPage + Lab.
 2026-11-06 | T041 | Fibonacci flagship page: ops comparison, table walkthrough, recursion tree with memo collapse; 5 tests pass. Stage 2 complete.
 2026-11-06 | T042 | FibonacciLab: n slider, op comparison, reduced-motion-safe autoplay; 7 tests pass. Gate 2 PASS.
+2026-11-06 | T100 | Climbing Stairs module; 7 tests pass (20 seeded reference cases).
+2026-11-06 | T101 | House Robber module; 7 tests pass.
+2026-11-06 | T102 | House Robber II (circle via two linear passes); 8 tests pass.
+2026-11-06 | T103 | Min Cost Climbing Stairs module; 7 tests pass.
