@@ -16,7 +16,7 @@ Gate 0: `npm run typecheck && npm run lint && npm test && npm run build` pass; c
 ## Stage 1 — Shared Engine
 - [x] T010 | src/engine/types.ts, src/engine/types.test.ts | Engine types, renderer state contracts, input field schema, step validation helpers.
 - [x] T011 | src/engine/dpHelpers.ts, src/engine/dpHelpers.test.ts | StepRecorder class, table creation, immutable snapshots, clamp/cap helpers.
-- [ ] T012 | src/engine/usePlayer.ts, src/engine/usePlayer.test.ts | Zustand player: play/pause/step/reset/scrub/speed/keyboard, max steps.
+- [x] T012 | src/engine/usePlayer.ts, src/engine/usePlayer.test.ts | Zustand player: play/pause/step/reset/scrub/speed/keyboard, max steps.
 - [ ] T013 | src/components/PlayerControls.tsx, src/components/PlayerControls.test.tsx | Transport, scrubber, speed 0.25–4x, keyboard hints.
 - [ ] T014 | src/renderers/Table1D.tsx, src/renderers/Table1D.test.tsx | 1D table renderer with states, icons, labels, answer.
 - [ ] T015 | src/renderers/Table2D.tsx, src/renderers/Table2D.test.tsx | 2D table with row/col labels, dependency arrows, states, compact mode.
