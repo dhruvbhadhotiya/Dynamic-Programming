@@ -95,10 +95,10 @@ Gate 2: full suite and build pass; flagship route works from static build.
 - [x] T135 | src/problems/grid/dungeon-game.problem.ts, src/problems/grid/dungeon-game.problem.test.ts | Dungeon Game.
 - [x] T136 | src/lessons/grid.lesson.ts | Grid DP lesson with animated path.
 ### 3e Stocks
-- [ ] T140 | src/problems/stocks/stock-i.problem.ts, src/problems/stocks/stock-i.problem.test.ts | Best Time to Buy/Sell Stock I.
-- [ ] T141 | src/problems/stocks/stock-ii.problem.ts, src/problems/stocks/stock-ii.problem.test.ts | Stock II.
-- [ ] T142 | src/problems/stocks/stock-iii.problem.ts, src/problems/stocks/stock-iii.problem.test.ts | Stock III.
-- [ ] T143 | src/problems/stocks/stock-iv.problem.ts, src/problems/stocks/stock-iv.problem.test.ts | Stock IV.
+- [x] T140 | src/problems/stocks/stock-i.problem.ts, src/problems/stocks/stock-i.problem.test.ts | Best Time to Buy/Sell Stock I.
+- [x] T141 | src/problems/stocks/stock-ii.problem.ts, src/problems/stocks/stock-ii.problem.test.ts | Stock II.
+- [x] T142 | src/problems/stocks/stock-iii.problem.ts, src/problems/stocks/stock-iii.problem.test.ts | Stock III.
+- [x] T143 | src/problems/stocks/stock-iv.problem.ts, src/problems/stocks/stock-iv.problem.test.ts | Stock IV.
 - [ ] T144 | src/problems/stocks/stock-cooldown.problem.ts, src/problems/stocks/stock-cooldown.problem.test.ts | Stock with Cooldown.
 - [ ] T145 | src/problems/stocks/stock-fee.problem.ts, src/problems/stocks/stock-fee.problem.test.ts | Stock with Transaction Fee.
 - [ ] T146 | src/lessons/stocks.lesson.ts | State-machine lesson with animated states.
