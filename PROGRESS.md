@@ -14,3 +14,5 @@
 2026-11-06 | T019 | Explanation bar, step counter and variable watch with live/progress semantics; 5 tests pass. Follow-up: ProblemPage integration.
 2026-11-06 | T015 | 2D table with headers, state badges, dependency arrows, compact mode; 6 tests pass. Follow-up: engine renderer review.
 2026-11-06 | T017 | Recursion tree with layout, memo/pruned badges, active focus path; 3 tests pass. Follow-up: flagship Fibonacci.
+2026-11-06 | T018 | Prism code panel with language tabs, live line highlight, copy feedback, teacher-mode hide; 7 tests pass. Follow-up: ProblemPage wiring.
+2026-11-06 | T020 | Schema-driven input form with inline validation, randomize, revert; 8 tests pass; typecheck + lint clean. Follow-up: ModeToggle (T021).
