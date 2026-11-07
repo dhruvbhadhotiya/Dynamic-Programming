@@ -81,3 +81,4 @@
 2026-11-06 | T152 | Minimum Cost to Cut a Stick module; 6 tests pass (cut-order reference). Follow-up: Palindrome Partitioning II (T153).
 2026-11-06 | T153 | Palindrome Partitioning II interval DP module; 6 tests pass (cut-subset reference). Follow-up: Word Break (T154).
 2026-11-06 | T154 | Word Break suffix DP module with brute-force/memo/tabulation modes; 7 tests pass (cut-subset reference). Follow-up: Split Array Largest Sum (T155).
+2026-11-06 | T155 | Split Array Largest Sum table DP module (memo/tabulation); 6 tests pass (exhaustive cut reference). Follow-up: intervals lesson (T156).
