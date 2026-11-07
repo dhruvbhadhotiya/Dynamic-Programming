@@ -121,7 +121,7 @@ Gate 2: full suite and build pass; flagship route works from static build.
 - [x] T172 | src/problems/tree/house-robber-iii.problem.ts, src/problems/tree/house-robber-iii.problem.test.ts | House Robber III.
 - [x] T173 | src/problems/tree/rerooting.problem.ts, src/problems/tree/rerooting.problem.test.ts | Tree Rerooting.
 - [x] T174 | src/problems/tree/binary-tree-cameras.problem.ts, src/problems/tree/binary-tree-cameras.problem.test.ts | Binary Tree Cameras.
-- [ ] T175 | src/lessons/tree-dp.lesson.ts | Tree DP lesson with animated post-order.
+- [x] T175 | src/lessons/tree-dp.lesson.ts | Tree DP lesson with animated post-order.
 ### 3i Graphs
 - [ ] T180 | src/problems/graphs/dag-longest-path.problem.ts, src/problems/graphs/dag-longest-path.problem.test.ts | Longest Path in DAG.
 - [ ] T181 | src/problems/graphs/floyd-warshall.problem.ts, src/problems/graphs/floyd-warshall.problem.test.ts | Floyd–Warshall.
