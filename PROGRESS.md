@@ -89,3 +89,4 @@
 2026-11-06 | T163 | Bitmask DP lesson with animated assignment subset grid; 10 steps, validation clean. Bitmask category complete. Follow-up: tree diameter (T170).
 2026-11-06 | T170 | Binary Tree Diameter post-order module with memo/tabulation modes; 6 tests pass (all-pairs BFS reference). Follow-up: Maximum Independent Set on Tree (T171).
 2026-11-06 | T171 | Maximum Independent Set on Tree (weighted, forests supported) with memo/tabulation modes; 6 tests pass (exhaustive subset reference). Follow-up: House Robber III (T172).
+2026-11-06 | T172 | House Robber III binary-tree DP with memo/tabulation modes; 6 tests pass (exhaustive subset reference). Follow-up: Tree Rerooting (T173).
