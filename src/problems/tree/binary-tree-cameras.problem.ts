@@ -31,13 +31,13 @@ const javascriptCode = [
   '    if (!node) return 1;',
   '    const left = dfs(node.left), right = dfs(node.right);',
   '    if (left === 0 || right === 0) {',
-  '      cameras++; return 2;',
-  '    }',
+  '      cameras++; return 2; }',
   '    if (left === 2 || right === 2) return 1;',
   '    return 0;',
   '  }',
   '  // 0 = needs coverage, 1 = covered, 2 = has a camera',
-  '  const state = dfs(root); return cameras + (state === 0 ? 1 : 0);',
+  '  const state = dfs(root);',
+  '  return cameras + (state === 0 ? 1 : 0);',
   '}',
 ].join('\n');
 
@@ -48,13 +48,13 @@ const cppCode = [
   '    if (!node) return 1;',
   '    int left = dfs(node->left), right = dfs(node->right);',
   '    if (left == 0 || right == 0) {',
-  '      cameras++; return 2;',
-  '    }',
+  '      cameras++; return 2; }',
   '    if (left == 2 || right == 2) return 1;',
   '    return 0;',
   '  };',
   '  // 0 = needs coverage, 1 = covered, 2 = has a camera',
-  '  int state = dfs(root); return cameras + (state == 0 ? 1 : 0);',
+  '  int state = dfs(root);',
+  '  return cameras + (state == 0 ? 1 : 0);',
   '}',
 ].join('\n');
 
@@ -164,7 +164,7 @@ function recordNode(
   cameras: number,
 ): void {
   const name = stateName(state);
-  const line = state === 2 ? 7 : state === 1 ? 9 : 10;
+  const line = state === 2 ? 7 : state === 1 ? 8 : 9;
   rec.at(line).update(
     (draft) => {
       const node = draft.nodes[index];

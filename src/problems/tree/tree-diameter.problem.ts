@@ -24,8 +24,7 @@ const javascriptCode = [
   '  function dfs(node) {',
   '    if (!node) return 0;',
   '    const l = dfs(node.left), r = dfs(node.right);',
-  '    best = Math.max(best, l + r); return 1 + Math.max(l, r);',
-  '  }',
+  '    best = Math.max(best, l + r); return 1 + Math.max(l, r); }',
   '  dfs(root); return best;',
   '}',
 ].join('\n');
@@ -36,8 +35,7 @@ const cppCode = [
   '  function<int(TreeNode*)> dfs = [&](TreeNode* node) {',
   '    if (!node) return 0;',
   '    int l = dfs(node->left), r = dfs(node->right);',
-  '    best = max(best, l + r); return 1 + max(l, r);',
-  '  };',
+  '    best = max(best, l + r); return 1 + max(l, r); };',
   '  dfs(root); return best;',
   '}',
 ].join('\n');
