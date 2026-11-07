@@ -19,8 +19,7 @@ const pythonCode = [
   '        for i in range(n):',
   '            j = i - 1',
   '            if j >= 0 and prev[j] is not None:',
-  '                while dq and prev[dq[-1]] <= prev[j]:',
-  '                    dq.pop()',
+  '                while dq and prev[dq[-1]] <= prev[j]: dq.pop()',
   '                dq.append(j)',
   '            if dq:',
   '                best_prev = prev[dq[0]]',
@@ -39,15 +38,14 @@ const javascriptCode = [
   '    const dq = [];',
   '    const cur = prev.slice();',
   '    for (let i = 0; i < n; i++) {',
-  '      if (i > 0 && prev[i - 1] !== null) {',
-  '        while (dq.length && prev[dq[dq.length - 1]] <= prev[i - 1]) dq.pop();',
-  '        dq.push(i - 1);',
-  '      }',
+  '      const j = i - 1;',
+  '      if (j >= 0 && prev[j] !== null) {',
+  '        while (dq.length && prev[dq[dq.length - 1]] <= prev[j]) dq.pop();',
+  '        dq.push(j); }',
   '      if (dq.length) {',
-  '        const cand = nums[i] + prev[dq[0]];',
-  '        cur[i] = prev[i] === null ? cand : Math.max(prev[i], cand);',
-  '      }',
-  '    }',
+  '        const bestPrev = prev[dq[0]];',
+  '        const cand = nums[i] + bestPrev;',
+  '        cur[i] = prev[i] === null ? cand : Math.max(prev[i], cand); } }',
   '    prev = cur; }',
   '  return Math.max(...prev.filter((v) => v !== null));',
   '}',
@@ -56,22 +54,20 @@ const javascriptCode = [
 const cppCode = [
   'int bestGold(vector<int>& nums, int k) {',
   '  int n = nums.size();',
-  '  const int NEG = -1000000000;',
-  '  vector<int> prev(n, NEG);',
+  '  vector<int> prev(n, -1000000000);',
   '  prev[0] = nums[0];',
   '  for (int t = 0; t < k; t++) {',
   '    deque<int> dq;',
   '    vector<int> cur = prev;',
   '    for (int i = 0; i < n; i++) {',
-  '      if (i > 0 && prev[i - 1] != NEG) {',
-  '        while (!dq.empty() && prev[dq.back()] <= prev[i - 1]) dq.pop_back();',
-  '        dq.push_back(i - 1);',
-  '      }',
+  '      int j = i - 1;',
+  '      if (j >= 0 && prev[j] != -1000000000) {',
+  '        while (!dq.empty() && prev[dq.back()] <= prev[j]) dq.pop_back();',
+  '        dq.push_back(j); }',
   '      if (!dq.empty()) {',
-  '        int cand = nums[i] + prev[dq.front()];',
-  '        cur[i] = prev[i] == NEG ? cand : max(prev[i], cand);',
-  '      }',
-  '    }',
+  '        int bestPrev = prev[dq.front()];',
+  '        int cand = nums[i] + bestPrev;',
+  '        cur[i] = prev[i] == -1000000000 ? cand : max(prev[i], cand); } }',
   '    prev = cur; }',
   '  return *max_element(prev.begin(), prev.end());',
   '}',
@@ -129,15 +125,15 @@ function generateSteps(input: MonotonicQueueInput, _mode: Mode): Step[] {
         const cand = (nums[i] ?? 0) + bestPrev;
         cur[i] = prev[i] === null || prev[i] === undefined ? cand : Math.max(prev[i] as number, cand);
         rec
-          .at(14)
+          .at(16)
           .fill([i], cur[i] ?? null, `Layer ${layer}: deque ${JSON.stringify(dq)} front j=${front} (prev=${bestPrev}). dp[${i}] = max(prev=${prev[i] ?? 'null'}, nums[${i}] + ${bestPrev} = ${cand}) = ${cur[i] ?? 'null'}.`, {
-            codeLine: 14,
+            codeLine: 16,
             highlights: [{ pos: [front ?? 0], kind: 'dependency', label: `max prev` }],
             vars: { layer, i, deque: dq.join(','), bestPrev, k, n },
           });
       } else {
-        rec.at(8).fill([i], cur[i] ?? null, `Layer ${layer}: no predecessor j < ${i} reachable yet (deque empty); dp[${i}] stays ${cur[i] ?? 'null'}.`, {
-          codeLine: 8,
+        rec.at(13).fill([i], cur[i] ?? null, `Layer ${layer}: no predecessor j < ${i} reachable yet (deque empty); dp[${i}] stays ${cur[i] ?? 'null'}.`, {
+          codeLine: 13,
           vars: { layer, i, deque: '', k, n },
         });
       }
@@ -153,8 +149,8 @@ function generateSteps(input: MonotonicQueueInput, _mode: Mode): Step[] {
       answerIdx = i;
     }
   });
-  rec.at(19).record(`The answer is ${answer}: the maximum over the final layer, reached at index ${answerIdx} using at most ${k} jumps.`, {
-    codeLine: 19,
+  rec.at(18).record(`The answer is ${answer}: the maximum over the final layer, reached at index ${answerIdx} using at most ${k} jumps.`, {
+    codeLine: 18,
     highlights: [{ pos: [answerIdx], kind: 'result', label: 'answer' }],
     vars: { answer, answerIdx, k, n },
   });
