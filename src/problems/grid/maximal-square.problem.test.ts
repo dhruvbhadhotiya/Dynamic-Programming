@@ -161,7 +161,7 @@ describe('maximal-square module', () => {
     for (const snippet of snippets) {
       const lines = snippet.split('\n');
       expect(lines[6]).toContain('dp[i][j]');
-      expect(lines[8]).toContain('return best');
+      expect(lines[9]).toContain('return best');
     }
 
     const maxCodeLine = Math.max(

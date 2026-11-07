@@ -128,12 +128,16 @@ function iterativeSteps(grid: number[][], memo: boolean): Step[] {
       const highlights: Highlight[] = [];
       if (i > 0) highlights.push({ pos: [i - 1, j], kind: 'dependency', label: `dp[${i - 1}][${j}]` });
       if (j > 0) highlights.push({ pos: [i, j - 1], kind: 'dependency', label: `dp[${i}][${j - 1}]` });
+      const terms: string[] = [];
+      if (i > 0) terms.push(`dp[${i - 1}][${j}] = ${fromTop}`);
+      if (j > 0) terms.push(`dp[${i}][${j - 1}] = ${fromLeft}`);
+      const sum = terms.join(' + ');
       rec.at(8).fill(
         [i, j],
         fromTop + fromLeft,
         memo
-          ? `Cache hit: reuse dp[${i - 1}][${j}] = ${fromTop} from above and dp[${i}][${j - 1}] = ${fromLeft} from the left; dp[${i}][${j}] = ${fromTop} + ${fromLeft} = ${fromTop + fromLeft}.`
-          : `dp[${i}][${j}] = dp[${i - 1}][${j}] + dp[${i}][${j - 1}] = ${fromTop} + ${fromLeft} = ${fromTop + fromLeft}. Paths can only arrive from above or from the left.`,
+          ? `Cache hit: reuse ${terms.join(' and ')}; dp[${i}][${j}] = ${fromTop} + ${fromLeft} = ${fromTop + fromLeft}.`
+          : `dp[${i}][${j}] = ${sum} = ${fromTop + fromLeft}. Paths can only arrive from above or from the left.`,
         {
           codeLine: 8,
           highlights,

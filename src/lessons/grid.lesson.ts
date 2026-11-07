@@ -222,9 +222,9 @@ const lesson: Lesson = {
     },
     {
       heading: 'Reverse DP: minimum health in a dungeon',
-      body: 'Dungeon problems invert the question. Instead of "what does the hero have on arrival", ask "what health does the hero need before entering this cell to reach the princess alive?" Define need[r][c] as the minimum health required at the doorstep of (r, c). The princess cell needs 1. Every other cell takes the smaller of its right and down needs and compensates for the cell value: need[r][c] = max(1, bestNext - grid[r][c]), because a healing cell (+10) lowers the requirement but never below 1, and a damage cell (-5) raises it.\n\nThe fill direction reverses too: start at the bottom-right and walk backwards, reading (r, c+1) and (r+1, c). Forward DP fails here because health depends on the future of the walk, which a top-left fill has not computed yet. Obstacles apply symmetrically — a blocked next cell is ignored unless both are blocked.',
+      body: 'Dungeon problems invert the question. Instead of "what does the hero have on arrival", ask "what health does the hero need before entering this cell to reach the princess alive?" Define need[r][c] as the minimum health required at the doorstep of (r, c). The princess cell needs max(1, 1 - grid[R-1][C-1]) — 1 if it heals, more if it hurts. Every other cell takes the smaller of its right and down needs and compensates for the cell value: need[r][c] = max(1, bestNext - grid[r][c]), because a healing cell (+10) lowers the requirement but never below 1, and a damage cell (-5) raises it.\n\nThe fill direction reverses too: start at the bottom-right and walk backwards, reading (r, c+1) and (r+1, c). Forward DP fails here because health depends on the future of the walk, which a top-left fill has not computed yet. Obstacles apply symmetrically — a blocked next cell is ignored unless both are blocked.',
       bullets: [
-        'need[R-1][C-1] = 1 (arrive alive at the princess).',
+        'need[R-1][C-1] = max(1, 1 - grid[R-1][C-1]) (arrive alive at the princess).',
         'need[r][c] = max(1, min(need[r][c+1], need[r+1][c]) - grid[r][c]).',
         'Fill bottom-to-top, right-to-left — readers look right and down.',
         'Clamp at 1: healing cells never let the requirement drop to 0 or negative.',

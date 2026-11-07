@@ -17,6 +17,7 @@ const pythonCode = [
   '        for j in range(n):',
   '            if matrix[i][j] == 1: dp[i][j] = 1 + (min(dp[i-1][j], dp[i][j-1], dp[i-1][j-1]) if i and j else 0)',
   '            best = max(best, dp[i][j])',
+  '    # best now holds the largest square side',
   '    return best',
 ].join('\n');
 
@@ -29,6 +30,7 @@ const javascriptCode = [
   '    for (let j = 0; j < n; j++) {',
   '      if (matrix[i][j] === 1) dp[i][j] = 1 + (i && j ? Math.min(dp[i-1][j], dp[i][j-1], dp[i-1][j-1]) : 0);',
   '      best = Math.max(best, dp[i][j]);',
+  '    }',
   '  return best;',
   '}',
 ].join('\n');
@@ -42,6 +44,7 @@ const cppCode = [
   '    for (int j = 0; j < n; j++) {',
   '      if (matrix[i][j] == 1) dp[i][j] = 1 + (i && j ? min({dp[i-1][j], dp[i][j-1], dp[i-1][j-1]}) : 0);',
   '      best = max(best, dp[i][j]);',
+  '    }',
   '  return best;',
   '}',
 ].join('\n');
@@ -69,9 +72,11 @@ function finish(
   answer: number,
   extra: Record<string, string | number>,
 ): Step[] {
-  rec.at(9).record(`The answer is ${answer}.`, {
-    codeLine: 9,
-    highlights: [{ pos: [bestPos[0], bestPos[1]], kind: 'result', label: 'answer' }],
+  const highlights: Array<{ pos: number[]; kind: 'result'; label: string }> =
+    answer > 0 ? [{ pos: [bestPos[0], bestPos[1]], kind: 'result', label: 'answer' }] : [];
+  rec.at(10).record(`The answer is ${answer}.`, {
+    codeLine: 10,
+    highlights,
     vars: { answer, ...extra },
   });
   return [...rec.steps];
