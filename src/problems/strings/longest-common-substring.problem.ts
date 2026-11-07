@@ -157,7 +157,7 @@ function normalizeInput(input: LongestCommonSubstringInput): { a: string; b: str
   const rawB = typeof input.b === 'string' ? input.b : '';
   const a = rawA.slice(0, MAX_LEN);
   const b = rawB.slice(0, MAX_LEN);
-  return { a: a.length > 0 ? a : 'a', b: b.length > 0 ? b : 'a' };
+  return { a, b };
 }
 
 const longestCommonSubstringModule: ProblemModule<LongestCommonSubstringInput> = {

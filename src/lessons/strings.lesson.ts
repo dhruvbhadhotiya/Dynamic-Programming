@@ -102,7 +102,7 @@ const lesson: Lesson = {
   sections: [
     {
       heading: 'Two prefixes, one table',
-      body: 'A string DP state names how much of each string has been consumed. Write dp[i][j] as the answer for the prefixes a[0..i-1] and b[0..j-1] — note the off-by-one: i and j count characters, so the full strings live at dp[m][n]. From cell (i, j) the next decision only ever involves a[i] and b[j], the next unconsumed characters.\n\nThat framing turns every alignment problem into three questions: what is the base row and column (empty prefixes), what does the recurrence read (diagonal, up, left), and which cell or maximum is the answer. In the diagram, a = "abcde" against b = "ace" fills to dp[5][3] = 3, the subsequence "ace".',
+      body: 'A string DP state names how much of each string has been consumed. Write dp[i][j] as the answer for the prefixes a[0..i-1] and b[0..j-1] — note the off-by-one: i and j count characters, so the full strings live at dp[m][n]. From cell (i, j) the next decision only ever involves a[i] and b[j] (0-based indexes of the next unconsumed characters).\n\nThat framing turns every alignment problem into three questions: what is the base row and column (empty prefixes), what does the recurrence read (diagonal, up, left), and which cell or maximum is the answer. In the diagram, a = "abcde" against b = "ace" fills to dp[5][3] = 3, the subsequence "ace".',
       bullets: [
         'dp[i][j]: answer for prefixes a[0..i-1], b[0..j-1] — i, j count characters.',
         'Every recurrence reads only (i-1, j-1), (i-1, j), (i, j-1) — never the current cell.',
@@ -113,12 +113,12 @@ const lesson: Lesson = {
     },
     {
       heading: 'Match extends the diagonal',
-      body: 'When the next characters are equal, the diagonal is free progress: take the best answer for the shorter prefixes and add one. LCS does exactly this — dp[i][j] = dp[i-1][j-1] + 1 on a match. Subsequence counting uses the diagonal too, but adds the "skip" branch: matching lets you extend every subsequence ending at the previous position, so dp[i][j] = dp[i-1][j] + dp[i-1][j-1].\n\nThe structure to memorize: a match never needs the up or left neighbor because the diagonal already dominates them. In the diagram every matching cell (a/c, b/e... the a, c, e diagonal) extends its diagonal neighbor by one, and those +1s are what accumulate to 3.',
+      body: 'When the next characters are equal, the diagonal is free progress: take the best answer for the shorter prefixes and add one. LCS does exactly this — dp[i][j] = dp[i-1][j-1] + 1 on a match. Subsequence counting uses the diagonal too, but adds the "skip" branch: matching lets you extend every subsequence ending at the previous position, so dp[i][j] = dp[i-1][j] + dp[i-1][j-1].\n\nThe structure to memorize: for LCS (and edit distance) a match needs only the diagonal — it already dominates up and left — while distinct-subsequence counting additionally needs the up neighbor, because skipping s[i-1] is a separate choice. In the diagram every matching cell (a/a, c/c, e/e on the a, c, e diagonal) extends its diagonal neighbor by one, and those +1s are what accumulate to 3.',
       bullets: [
         'LCS match: dp[i][j] = dp[i-1][j-1] + 1.',
         'Distinct subsequences match: dp[i][j] = dp[i-1][j] + dp[i-1][j-1].',
         'Edit distance match: dp[i][j] = dp[i-1][j-1] (no cost to keep).',
-        'A match never needs up or left — the diagonal already beats them.',
+        'For LCS and edit distance a match needs only the diagonal; distinct subsequences still needs up.',
       ],
       callout: 'Match = diagonal plus something. The something is what changes per problem.',
     },

@@ -217,7 +217,7 @@ const editDistanceModule: ProblemModule<EditDistanceInput> = {
       q: 'What is the edit distance of "horse" and "ros"?',
       options: ['3', '2', '4', '1'],
       answer: 0,
-      why: 'Substitute h->r, delete r, substitute e->o takes 3 edits (horse -> rorse -> rose -> ros), and no shorter sequence works.',
+      why: 'Substitute h->r, delete r, delete e takes 3 edits (horse -> rorse -> rose -> ros), and no shorter sequence works.',
     },
     {
       q: 'What does dp[i][j] mean?',
