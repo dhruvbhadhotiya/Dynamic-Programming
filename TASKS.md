@@ -105,7 +105,7 @@ Gate 2: full suite and build pass; flagship route works from static build.
 ### 3f Intervals
 - [x] T150 | src/problems/intervals/matrix-chain.problem.ts, src/problems/intervals/matrix-chain.problem.test.ts | Matrix Chain Multiplication.
 - [x] T151 | src/problems/intervals/burst-balloons.problem.ts, src/problems/intervals/burst-balloons.problem.test.ts | Burst Balloons.
-- [~] T152 | src/problems/intervals/min-cost-cut-stick.problem.ts, src/problems/intervals/min-cost-cut-stick.problem.test.ts | Minimum Cost to Cut a Stick.
+- [x] T152 | src/problems/intervals/min-cost-cut-stick.problem.ts, src/problems/intervals/min-cost-cut-stick.problem.test.ts | Minimum Cost to Cut a Stick.
 - [~] T153 | src/problems/intervals/palindrome-partition-ii.problem.ts, src/problems/intervals/palindrome-partition-ii.problem.test.ts | Palindrome Partitioning II.
 - [ ] T154 | src/problems/intervals/word-break.problem.ts, src/problems/intervals/word-break.problem.test.ts | Word Break.
 - [ ] T155 | src/problems/intervals/split-array-largest-sum.problem.ts, src/problems/intervals/split-array-largest-sum.problem.test.ts | Split Array Largest Sum.

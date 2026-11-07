@@ -78,3 +78,4 @@
 2026-11-06 | T146 | Stock state-machine lesson with cooldown diagram; validation clean. Stocks category complete.
 2026-11-06 | T150 | Matrix Chain Multiplication interval DP module; 6 tests pass (exhaustive reference). Follow-up: Burst Balloons (T151).
 2026-11-06 | T151 | Burst Balloons (last-balloon interval DP) module; 6 tests pass (burst-order reference). Follow-up: Min Cost to Cut a Stick (T152).
+2026-11-06 | T152 | Minimum Cost to Cut a Stick module; 6 tests pass (cut-order reference). Follow-up: Palindrome Partitioning II (T153).
