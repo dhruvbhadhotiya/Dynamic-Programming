@@ -107,7 +107,7 @@ Gate 2: full suite and build pass; flagship route works from static build.
 - [x] T151 | src/problems/intervals/burst-balloons.problem.ts, src/problems/intervals/burst-balloons.problem.test.ts | Burst Balloons.
 - [x] T152 | src/problems/intervals/min-cost-cut-stick.problem.ts, src/problems/intervals/min-cost-cut-stick.problem.test.ts | Minimum Cost to Cut a Stick.
 - [x] T153 | src/problems/intervals/palindrome-partition-ii.problem.ts, src/problems/intervals/palindrome-partition-ii.problem.test.ts | Palindrome Partitioning II.
-- [~] T154 | src/problems/intervals/word-break.problem.ts, src/problems/intervals/word-break.problem.test.ts | Word Break.
+- [x] T154 | src/problems/intervals/word-break.problem.ts, src/problems/intervals/word-break.problem.test.ts | Word Break.
 - [ ] T155 | src/problems/intervals/split-array-largest-sum.problem.ts, src/problems/intervals/split-array-largest-sum.problem.test.ts | Split Array Largest Sum.
 - [ ] T156 | src/lessons/intervals.lesson.ts | Interval DP lesson with triangle diagram.
 ### 3g Bitmask

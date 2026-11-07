@@ -80,3 +80,4 @@
 2026-11-06 | T151 | Burst Balloons (last-balloon interval DP) module; 6 tests pass (burst-order reference). Follow-up: Min Cost to Cut a Stick (T152).
 2026-11-06 | T152 | Minimum Cost to Cut a Stick module; 6 tests pass (cut-order reference). Follow-up: Palindrome Partitioning II (T153).
 2026-11-06 | T153 | Palindrome Partitioning II interval DP module; 6 tests pass (cut-subset reference). Follow-up: Word Break (T154).
+2026-11-06 | T154 | Word Break suffix DP module with brute-force/memo/tabulation modes; 7 tests pass (cut-subset reference). Follow-up: Split Array Largest Sum (T155).
