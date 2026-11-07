@@ -123,7 +123,7 @@ Gate 2: full suite and build pass; flagship route works from static build.
 - [x] T174 | src/problems/tree/binary-tree-cameras.problem.ts, src/problems/tree/binary-tree-cameras.problem.test.ts | Binary Tree Cameras.
 - [x] T175 | src/lessons/tree-dp.lesson.ts | Tree DP lesson with animated post-order.
 ### 3i Graphs
-- [ ] T180 | src/problems/graphs/dag-longest-path.problem.ts, src/problems/graphs/dag-longest-path.problem.test.ts | Longest Path in DAG.
+- [x] T180 | src/problems/graphs/dag-longest-path.problem.ts, src/problems/graphs/dag-longest-path.problem.test.ts, src/engine/types.ts, src/renderers/DagGraph.tsx, src/renderers/DagGraph.test.tsx | Longest Path in DAG.
 - [ ] T181 | src/problems/graphs/floyd-warshall.problem.ts, src/problems/graphs/floyd-warshall.problem.test.ts | Floyd–Warshall.
 - [ ] T182 | src/problems/graphs/bellman-ford.problem.ts, src/problems/graphs/bellman-ford.problem.test.ts | Bellman–Ford.
 - [ ] T183 | src/problems/graphs/cheapest-flights-k-stops.problem.ts, src/problems/graphs/cheapest-flights-k-stops.problem.test.ts | Cheapest Flights Within K Stops.

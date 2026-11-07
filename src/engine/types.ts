@@ -7,6 +7,8 @@ export interface Highlight {
   pos: number[];
   kind: CellKind;
   label?: string;
+  /** Graph renderers only: whether the index names a node, an edge, or both. Defaults to 'both'. */
+  target?: 'node' | 'edge' | 'both';
 }
 
 export interface Step {

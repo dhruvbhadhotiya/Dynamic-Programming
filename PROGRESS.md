@@ -93,3 +93,4 @@
 2026-11-06 | T173 | Tree Rerooting (best meeting node) with two-pass size/total DP; 6 tests pass (all-pairs BFS reference). Follow-up: Binary Tree Cameras (T174).
 2026-11-06 | T174 | Binary Tree Cameras three-state post-order greedy with memo/tabulation modes; 6 tests pass (exhaustive camera-subset reference). Follow-up: tree DP lesson (T175).
 2026-11-06 | T175 | Tree DP lesson with animated 7-node rob/skip post-order; 9 steps, final answer 12, validation clean. Tree category complete. Follow-up: DAG longest path (T180).
+2026-11-07 | T180 | Longest Path in DAG with memo/tabulation, path reconstruction, and scoped node/edge highlights; 15 targeted tests pass, typecheck + lint clean. Follow-up: Floyd-Warshall (T181).

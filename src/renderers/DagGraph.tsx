@@ -37,9 +37,15 @@ const EDGE_COLOR: Record<CellKind, string> = {
   pruned: 'rgb(var(--bad))',
 };
 
-function winningHighlights(highlights: Highlight[], length: number): Map<number, Highlight> {
+function winningHighlights(
+  highlights: Highlight[],
+  length: number,
+  target: 'node' | 'edge',
+): Map<number, Highlight> {
   const winners = new Map<number, Highlight>();
   for (const highlight of highlights) {
+    const scope = highlight.target ?? 'both';
+    if (scope !== 'both' && scope !== target) continue;
     const [index] = highlight.pos;
     if (highlight.pos.length === 1 && index !== undefined && index >= 0 && index < length) {
       winners.set(index, highlight);
@@ -68,8 +74,8 @@ function markerVariant(kind: CellKind | undefined): CellKind | 'default' {
 
 export function DagGraph({ state, highlights, className = '' }: DagGraphProps) {
   const directed = state.directed ?? true;
-  const nodeHighlights = winningHighlights(highlights, state.nodes.length);
-  const edgeHighlights = winningHighlights(highlights, state.edges.length);
+  const nodeHighlights = winningHighlights(highlights, state.nodes.length, 'node');
+  const edgeHighlights = winningHighlights(highlights, state.edges.length, 'edge');
   const byId = new Map(state.nodes.map((node) => [node.id, node]));
 
   const markers: { variant: 'default' | CellKind; color: string }[] = [

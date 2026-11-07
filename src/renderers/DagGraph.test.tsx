@@ -76,6 +76,23 @@ describe('DagGraph', () => {
     expect(screen.getByText('↗ Chosen path')).toBeInTheDocument();
   });
 
+  it('scopes an index to nodes or edges when target is set', () => {
+    const { unmount } = render(
+      <DagGraph state={graph} highlights={[{ pos: [0], kind: 'path', target: 'edge' }]} />,
+    );
+
+    expect(document.querySelector('[data-node-index="0"]')).toHaveAttribute('data-node-highlight', 'none');
+    expect(document.querySelector('[data-edge-index="0"]')).toHaveAttribute('data-edge-highlight', 'path');
+    unmount();
+
+    render(
+      <DagGraph state={graph} highlights={[{ pos: [1], kind: 'result', target: 'node' }]} />,
+    );
+
+    expect(document.querySelector('[data-node-index="1"]')).toHaveAttribute('data-node-highlight', 'result');
+    expect(document.querySelector('[data-edge-index="1"]')).toHaveAttribute('data-edge-highlight', 'none');
+  });
+
   it('marks highlighted nodes with a symbol and text label, not colour alone', () => {
     render(
       <DagGraph
