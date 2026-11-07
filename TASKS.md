@@ -131,10 +131,10 @@ Gate 2: full suite and build pass; flagship route works from static build.
 ### 3j Counting / Probability / Games
 - [x] T190 | src/problems/counting/unique-bsts.problem.ts, src/problems/counting/unique-bsts.problem.test.ts | Unique Binary Search Trees.
 - [x] T191 | src/problems/counting/dice-sums.problem.ts, src/problems/counting/dice-sums.problem.test.ts | Number of Dice Rolls With Target Sum.
-- [ ] T192 | src/problems/counting/knight-probability.problem.ts, src/problems/counting/knight-probability.problem.test.ts | Knight Probability in Chessboard.
-- [ ] T193 | src/problems/counting/predict-the-winner.problem.ts, src/problems/counting/predict-the-winner.problem.test.ts | Predict the Winner.
-- [ ] T194 | src/problems/counting/stone-game.problem.ts, src/problems/counting/stone-game.problem.test.ts | Stone Game.
-- [ ] T195 | src/problems/counting/digit-dp.problem.ts, src/problems/counting/digit-dp.problem.test.ts | Digit DP: count numbers with no 4.
+- [x] T192 | src/problems/counting/knight-probability.problem.ts, src/problems/counting/knight-probability.problem.test.ts | Knight Probability in Chessboard.
+- [x] T193 | src/problems/counting/predict-the-winner.problem.ts, src/problems/counting/predict-the-winner.problem.test.ts | Predict the Winner.
+- [x] T194 | src/problems/counting/stone-game.problem.ts, src/problems/counting/stone-game.problem.test.ts | Stone Game.
+- [x] T195 | src/problems/counting/digit-dp.problem.ts, src/problems/counting/digit-dp.problem.test.ts | Digit DP: count numbers with no 4.
 - [ ] T196 | src/lessons/counting.lesson.ts | Counting/game DP lesson with animated states.
 ### 3k Advanced (optional, last)
 - [ ] T200 | src/problems/advanced/prefix-sum-optimization.problem.ts, src/problems/advanced/prefix-sum-optimization.problem.test.ts | Prefix-sum optimization.

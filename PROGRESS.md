@@ -100,3 +100,7 @@
 2026-11-07 | T184 | Graphs lesson with animated 5-node DAG; 11 steps, final answer 13, validation clean. Graphs category complete. Follow-up: Unique BSTs (T190).
 2026-11-07 | T190 | Unique BSTs Catalan DP with memo/tabulation; 8 tests pass (Catalan closed-form reference). Follow-up: dice sums (T191).
 2026-11-07 | T191 | Dice sums layered counting DP with memo/tabulation; 7 tests pass (exhaustive k^n enumeration reference). Follow-up: knight probability (T192).
+2026-11-07 | T192 | Knight probability counting DP with memo/tabulation; 7 tests pass (exhaustive move-sequence reference). Follow-up: predict the winner (T193).
+2026-11-07 | T193 | Predict the Winner optimal-play interval DP with memo/tabulation; 9 tests pass (exhaustive minimax reference). Follow-up: stone game (T194).
+2026-11-07 | T194 | Stone Game interval DP with memo/tabulation; 6 tests pass (exhaustive minimax reference). Follow-up: digit DP (T195).
+2026-11-07 | T195 | Digit DP counting numbers with no digit 4, tight/noFour state table; 7 tests pass (brute-force string reference). Follow-up: counting lesson (T196).
