@@ -19,6 +19,7 @@ const pythonCode = [
   '        for t in range(k, 0, -1):',
   '            hold[t] = max(hold[t], cash[t - 1] - prices[i])',
   '            cash[t] = max(cash[t], hold[t] + prices[i])',
+  '    # all days done',
   '    return cash[k]',
 ].join('\n');
 
@@ -32,6 +33,7 @@ const javascriptCode = [
   '    for (let t = k; t >= 1; t--) {',
   '      hold[t] = Math.max(hold[t], cash[t - 1] - prices[i]);',
   '      cash[t] = Math.max(cash[t], hold[t] + prices[i]);',
+  '    }}',
   '  return cash[k];',
   '}',
 ].join('\n');
@@ -46,6 +48,7 @@ const cppCode = [
   '    for (int t = k; t >= 1; t--) {',
   '      hold[t] = max(hold[t], cash[t - 1] - prices[i]);',
   '      cash[t] = max(cash[t], hold[t] + prices[i]);',
+  '    }}',
   '  return cash[k];',
   '}',
 ].join('\n');
@@ -73,8 +76,8 @@ function finish(
   answer: number,
   extra: Record<string, string | number>,
 ): Step[] {
-  rec.at(10).record(`The answer is cash[${k}] = ${answer}.`, {
-    codeLine: 10,
+  rec.at(11).record(`The answer is cash[${k}] = ${answer}.`, {
+    codeLine: 11,
     highlights: [{ pos: [k], kind: 'result', label: 'answer' }],
     vars: { answer, ...extra },
   });

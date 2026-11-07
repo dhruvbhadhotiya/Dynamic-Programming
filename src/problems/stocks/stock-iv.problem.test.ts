@@ -70,13 +70,13 @@ describe('stock-iv module', () => {
       stockIvModule.code.cpp,
     ];
     const minLines = Math.min(...snippets.map((snippet) => snippet.split('\n').length));
-    expect(minLines).toBeGreaterThanOrEqual(10);
+    expect(minLines).toBeGreaterThanOrEqual(11);
 
-    // The cash-update line (line 9) and return line (line 10) line up in every language.
+    // The cash-update line (line 9) and return line (line 11) line up in every language.
     for (const snippet of snippets) {
       const lines = snippet.split('\n');
       expect(lines[8]).toContain('cash[t]');
-      expect(lines[9]).toContain('return');
+      expect(lines[10]).toContain('return');
     }
 
     const maxCodeLine = Math.max(
