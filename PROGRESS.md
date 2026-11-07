@@ -85,3 +85,4 @@
 2026-11-06 | T156 | Interval DP lesson with animated 3-matrix triangle; 12 steps, validation clean. Intervals category complete. Follow-up: bitmask TSP (T160).
 2026-11-06 | T160 | TSP Held-Karp module with mask x last table; 6 tests pass (permutation reference). Follow-up: Assignment Problem (T161).
 2026-11-06 | T161 | Assignment Problem bitmask DP module; 6 tests pass (job-permutation reference). Follow-up: Shortest Path Visiting All Nodes (T162).
+2026-11-06 | T162 | Shortest Path Visiting All Nodes BFS-over-(mask,node) module; 5 tests pass (Floyd-Warshall + visit-order reference). Follow-up: bitmask lesson (T163).

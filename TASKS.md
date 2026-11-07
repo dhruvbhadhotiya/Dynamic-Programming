@@ -113,7 +113,7 @@ Gate 2: full suite and build pass; flagship route works from static build.
 ### 3g Bitmask
 - [x] T160 | src/problems/bitmask/tsp.problem.ts, src/problems/bitmask/tsp.problem.test.ts | TSP Held-Karp.
 - [x] T161 | src/problems/bitmask/assignment.problem.ts, src/problems/bitmask/assignment.problem.test.ts | Assignment Problem.
-- [ ] T162 | src/problems/bitmask/shortest-path-all-nodes.problem.ts, src/problems/bitmask/shortest-path-all-nodes.problem.test.ts | Shortest Path Visiting All Nodes.
+- [x] T162 | src/problems/bitmask/shortest-path-all-nodes.problem.ts, src/problems/bitmask/shortest-path-all-nodes.problem.test.ts | Shortest Path Visiting All Nodes.
 - [ ] T163 | src/lessons/bitmask.lesson.ts | Bitmask lesson with animated subset grid.
 ### 3h Tree DP
 - [ ] T170 | src/problems/tree/tree-diameter.problem.ts, src/problems/tree/tree-diameter.problem.test.ts | Binary Tree Diameter.
