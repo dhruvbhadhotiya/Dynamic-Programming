@@ -96,3 +96,7 @@
 2026-11-07 | T180 | Longest Path in DAG with memo/tabulation, path reconstruction, and scoped node/edge highlights; 15 targeted tests pass, typecheck + lint clean. Follow-up: Floyd-Warshall (T181).
 2026-11-07 | T181 | Floyd-Warshall all-pairs table with in-place relaxation rounds; 6 tests pass (Dijkstra reference). Follow-up: Bellman-Ford (T182).
 2026-11-07 | T182 | Bellman-Ford with negative edges, early convergence, and reachable negative-cycle detection; 6 tests pass (Floyd-Warshall reference). Follow-up: Cheapest Flights Within K Stops (T183).
+2026-11-07 | T183 | Cheapest Flights Within K Stops layered DP with previous-layer relaxation; 8 tests pass (DFS enumeration reference). Follow-up: graphs lesson (T184).
+2026-11-07 | T184 | Graphs lesson with animated 5-node DAG; 11 steps, final answer 13, validation clean. Graphs category complete. Follow-up: Unique BSTs (T190).
+2026-11-07 | T190 | Unique BSTs Catalan DP with memo/tabulation; 8 tests pass (Catalan closed-form reference). Follow-up: dice sums (T191).
+2026-11-07 | T191 | Dice sums layered counting DP with memo/tabulation; 7 tests pass (exhaustive k^n enumeration reference). Follow-up: knight probability (T192).

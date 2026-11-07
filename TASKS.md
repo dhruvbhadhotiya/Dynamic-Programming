@@ -126,11 +126,11 @@ Gate 2: full suite and build pass; flagship route works from static build.
 - [x] T180 | src/problems/graphs/dag-longest-path.problem.ts, src/problems/graphs/dag-longest-path.problem.test.ts, src/engine/types.ts, src/renderers/DagGraph.tsx, src/renderers/DagGraph.test.tsx | Longest Path in DAG.
 - [x] T181 | src/problems/graphs/floyd-warshall.problem.ts, src/problems/graphs/floyd-warshall.problem.test.ts | Floyd–Warshall.
 - [x] T182 | src/problems/graphs/bellman-ford.problem.ts, src/problems/graphs/bellman-ford.problem.test.ts | Bellman–Ford.
-- [ ] T183 | src/problems/graphs/cheapest-flights-k-stops.problem.ts, src/problems/graphs/cheapest-flights-k-stops.problem.test.ts | Cheapest Flights Within K Stops.
-- [ ] T184 | src/lessons/graphs.lesson.ts | Graph DP lesson with animated DAG.
+- [x] T183 | src/problems/graphs/cheapest-flights-k-stops.problem.ts, src/problems/graphs/cheapest-flights-k-stops.problem.test.ts | Cheapest Flights Within K Stops.
+- [x] T184 | src/lessons/graphs.lesson.ts | Graph DP lesson with animated DAG.
 ### 3j Counting / Probability / Games
-- [ ] T190 | src/problems/counting/unique-bsts.problem.ts, src/problems/counting/unique-bsts.problem.test.ts | Unique Binary Search Trees.
-- [ ] T191 | src/problems/counting/dice-sums.problem.ts, src/problems/counting/dice-sums.problem.test.ts | Number of Dice Rolls With Target Sum.
+- [x] T190 | src/problems/counting/unique-bsts.problem.ts, src/problems/counting/unique-bsts.problem.test.ts | Unique Binary Search Trees.
+- [x] T191 | src/problems/counting/dice-sums.problem.ts, src/problems/counting/dice-sums.problem.test.ts | Number of Dice Rolls With Target Sum.
 - [ ] T192 | src/problems/counting/knight-probability.problem.ts, src/problems/counting/knight-probability.problem.test.ts | Knight Probability in Chessboard.
 - [ ] T193 | src/problems/counting/predict-the-winner.problem.ts, src/problems/counting/predict-the-winner.problem.test.ts | Predict the Winner.
 - [ ] T194 | src/problems/counting/stone-game.problem.ts, src/problems/counting/stone-game.problem.test.ts | Stone Game.
