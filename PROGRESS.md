@@ -125,3 +125,4 @@
 2026-11-07 | T232 | e2e smoke spec created and run: 8 playwright tests pass.
 2026-11-07 | T233 | README with run/build/deploy/add-problem guide.
 2026-11-07 | T234 | REPORT with built/cut/limitations, cross-checked against code.
+2026-11-07 | T235 | FINAL GATE: every task done. typecheck + lint + 597 unit tests + production build + 8 e2e tests + static preview all pass. Fixed vitest picking up e2e spec via exclude in vite.config. Gate 5 = DONE.

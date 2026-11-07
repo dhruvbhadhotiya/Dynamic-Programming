@@ -163,6 +163,6 @@ Gate 3 per category: each module test passes; app builds; code-line ranges valid
 - [x] T232 | e2e/smoke.spec.ts | Playwright smoke per problem page: load/play/predict/no console errors.
 - [x] T233 | README.md | Run, build, deploy, add problem in 10 minutes.
 - [x] T234 | REPORT.md | Built, cut, limitations.
-- [ ] T235 | all | Final gate: every task done, typecheck/lint/test/build/e2e pass, static build preview.
+- [x] T235 | all | Final gate: every task done, typecheck/lint/test/build/e2e pass, static build preview.
 
 Gate 5 = DONE.
