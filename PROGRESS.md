@@ -90,3 +90,4 @@
 2026-11-06 | T170 | Binary Tree Diameter post-order module with memo/tabulation modes; 6 tests pass (all-pairs BFS reference). Follow-up: Maximum Independent Set on Tree (T171).
 2026-11-06 | T171 | Maximum Independent Set on Tree (weighted, forests supported) with memo/tabulation modes; 6 tests pass (exhaustive subset reference). Follow-up: House Robber III (T172).
 2026-11-06 | T172 | House Robber III binary-tree DP with memo/tabulation modes; 6 tests pass (exhaustive subset reference). Follow-up: Tree Rerooting (T173).
+2026-11-06 | T173 | Tree Rerooting (best meeting node) with two-pass size/total DP; 6 tests pass (all-pairs BFS reference). Follow-up: Binary Tree Cameras (T174).

@@ -119,7 +119,7 @@ Gate 2: full suite and build pass; flagship route works from static build.
 - [x] T170 | src/problems/tree/tree-diameter.problem.ts, src/problems/tree/tree-diameter.problem.test.ts | Binary Tree Diameter.
 - [x] T171 | src/problems/tree/max-independent-set.problem.ts, src/problems/tree/max-independent-set.problem.test.ts | Maximum Independent Set on Tree.
 - [x] T172 | src/problems/tree/house-robber-iii.problem.ts, src/problems/tree/house-robber-iii.problem.test.ts | House Robber III.
-- [ ] T173 | src/problems/tree/rerooting.problem.ts, src/problems/tree/rerooting.problem.test.ts | Tree Rerooting.
+- [x] T173 | src/problems/tree/rerooting.problem.ts, src/problems/tree/rerooting.problem.test.ts | Tree Rerooting.
 - [ ] T174 | src/problems/tree/binary-tree-cameras.problem.ts, src/problems/tree/binary-tree-cameras.problem.test.ts | Binary Tree Cameras.
 - [ ] T175 | src/lessons/tree-dp.lesson.ts | Tree DP lesson with animated post-order.
 ### 3i Graphs
