@@ -104,3 +104,8 @@
 2026-11-07 | T193 | Predict the Winner optimal-play interval DP with memo/tabulation; 9 tests pass (exhaustive minimax reference). Follow-up: stone game (T194).
 2026-11-07 | T194 | Stone Game interval DP with memo/tabulation; 6 tests pass (exhaustive minimax reference). Follow-up: digit DP (T195).
 2026-11-07 | T195 | Digit DP counting numbers with no digit 4, tight/noFour state table; 7 tests pass (brute-force string reference). Follow-up: counting lesson (T196).
+2026-11-07 | T196 | Counting/game DP lesson with animated Catalan table; 13 steps, final answer 42, validation clean. Counting category complete. Follow-up: advanced (T200).
+2026-11-07 | T200 | Prefix-sum optimization for subarray sum equals K; 7 tests pass (O(n^2) enumeration reference). Follow-up: monotonic queue (T201).
+2026-11-07 | T201 | Monotonic queue DP for best gold with k jumps; 5 tests pass (O(k n^2) brute-force reference). Follow-up: SOS DP (T202).
+2026-11-07 | T202 | Sum over subsets DP with in-place bit passes; 6 tests pass (submask enumeration reference). Follow-up: matrix exponentiation (T203).
+2026-11-07 | T203 | Matrix exponentiation for fast Fibonacci; 7 tests pass (iterative Fibonacci reference). Advanced category complete. Follow-up: Stage 4 reviews (T210).

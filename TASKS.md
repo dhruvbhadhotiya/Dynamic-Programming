@@ -135,12 +135,12 @@ Gate 2: full suite and build pass; flagship route works from static build.
 - [x] T193 | src/problems/counting/predict-the-winner.problem.ts, src/problems/counting/predict-the-winner.problem.test.ts | Predict the Winner.
 - [x] T194 | src/problems/counting/stone-game.problem.ts, src/problems/counting/stone-game.problem.test.ts | Stone Game.
 - [x] T195 | src/problems/counting/digit-dp.problem.ts, src/problems/counting/digit-dp.problem.test.ts | Digit DP: count numbers with no 4.
-- [ ] T196 | src/lessons/counting.lesson.ts | Counting/game DP lesson with animated states.
+- [x] T196 | src/lessons/counting.lesson.ts | Counting/game DP lesson with animated states.
 ### 3k Advanced (optional, last)
-- [ ] T200 | src/problems/advanced/prefix-sum-optimization.problem.ts, src/problems/advanced/prefix-sum-optimization.problem.test.ts | Prefix-sum optimization.
-- [ ] T201 | src/problems/advanced/monotonic-queue.problem.ts, src/problems/advanced/monotonic-queue.problem.test.ts | Monotonic queue DP.
-- [ ] T202 | src/problems/advanced/sos-dp.problem.ts, src/problems/advanced/sos-dp.problem.test.ts | Sum over subsets DP.
-- [ ] T203 | src/problems/advanced/matrix-exponentiation.problem.ts, src/problems/advanced/matrix-exponentiation.problem.test.ts | Matrix exponentiation.
+- [x] T200 | src/problems/advanced/prefix-sum-optimization.problem.ts, src/problems/advanced/prefix-sum-optimization.problem.test.ts | Prefix-sum optimization.
+- [x] T201 | src/problems/advanced/monotonic-queue.problem.ts, src/problems/advanced/monotonic-queue.problem.test.ts | Monotonic queue DP.
+- [x] T202 | src/problems/advanced/sos-dp.problem.ts, src/problems/advanced/sos-dp.problem.test.ts | Sum over subsets DP.
+- [x] T203 | src/problems/advanced/matrix-exponentiation.problem.ts, src/problems/advanced/matrix-exponentiation.problem.test.ts | Matrix exponentiation.
 
 Gate 3 per category: each module test passes; app builds; code-line ranges valid.
 
