@@ -145,17 +145,17 @@ Gate 2: full suite and build pass; flagship route works from static build.
 Gate 3 per category: each module test passes; app builds; code-line ranges valid.
 
 ## Stage 4 — Review (one per category)
-- [ ] T210 | src/problems/1d/*, src/lessons/1d.lesson.ts | Review 1D: correctness, wording, line alignment.
-- [ ] T211 | src/problems/knapsack/*, src/lessons/knapsack.lesson.ts | Review Knapsack.
-- [ ] T212 | src/problems/strings/*, src/lessons/strings.lesson.ts | Review Strings.
-- [ ] T213 | src/problems/grid/*, src/lessons/grid.lesson.ts | Review Grid.
-- [ ] T214 | src/problems/stocks/*, src/lessons/stocks.lesson.ts | Review Stocks.
-- [ ] T215 | src/problems/intervals/*, src/lessons/intervals.lesson.ts | Review Intervals.
-- [ ] T216 | src/problems/bitmask/*, src/lessons/bitmask.lesson.ts | Review Bitmask.
-- [ ] T217 | src/problems/tree/*, src/lessons/tree-dp.lesson.ts | Review Tree DP.
-- [ ] T218 | src/problems/graphs/*, src/lessons/graphs.lesson.ts | Review Graphs.
-- [ ] T219 | src/problems/counting/*, src/lessons/counting.lesson.ts | Review Counting.
-- [ ] T220 | src/problems/advanced/* | Review Advanced (if built).
+- [x] T210 | src/problems/1d/*, src/lessons/1d.lesson.ts | Review 1D: correctness, wording, line alignment.
+- [x] T211 | src/problems/knapsack/*, src/lessons/knapsack.lesson.ts | Review Knapsack.
+- [x] T212 | src/problems/strings/*, src/lessons/strings.lesson.ts | Review Strings.
+- [x] T213 | src/problems/grid/*, src/lessons/grid.lesson.ts | Review Grid.
+- [x] T214 | src/problems/stocks/*, src/lessons/stocks.lesson.ts | Review Stocks.
+- [x] T215 | src/problems/intervals/*, src/lessons/intervals.lesson.ts | Review Intervals.
+- [x] T216 | src/problems/bitmask/*, src/lessons/bitmask.lesson.ts | Review Bitmask.
+- [x] T217 | src/problems/tree/*, src/lessons/tree-dp.lesson.ts | Review Tree DP.
+- [x] T218 | src/problems/graphs/*, src/lessons/graphs.lesson.ts | Review Graphs.
+- [x] T219 | src/problems/counting/*, src/lessons/counting.lesson.ts | Review Counting.
+- [x] T220 | src/problems/advanced/* | Review Advanced (if built).
 
 ## Stage 5 — Polish
 - [ ] T230 | src/styles/globals.css, src/components/*, src/pages/* | Accessibility and responsive layout: phone/tablet/projector.

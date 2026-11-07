@@ -80,7 +80,7 @@ const lesson: Lesson = {
       bullets: [
         'ways(4) calls ways(3) and ways(2); ways(3) calls ways(2) again — ways(2) is computed twice.',
         'fib(5) computes fib(3) twice for the same reason.',
-        'Only n + 1 distinct values exist, but brute force explores about 2^n calls.',
+        'Only n + 1 distinct values exist, but brute force explores exponentially many calls.',
       ],
       callout: 'If the same subproblem appears again and again, dynamic programming pays for it once and reuses it.',
     },

@@ -31,10 +31,8 @@ const javascriptCode = [
   '    for (const x of a) {',
   '      const take = prev + x;',
   '      const next = Math.max(cur, take); prev = cur; cur = next;',
-  '    }',
-  '    best = Math.max(best, cur);',
-  '  }',
-  '  return best;',
+  '    } best = Math.max(best, cur);',
+  '  } return best;',
   '}',
 ].join('\n');
 
@@ -48,10 +46,8 @@ const cppCode = [
   '    for (int x : a) {',
   '      int take = prev + x;',
   '      int next = max(cur, take); prev = cur; cur = next;',
-  '    }',
-  '    best = max(best, cur);',
-  '  }',
-  '  return best;',
+  '    } best = max(best, cur);',
+  '  } return best;',
   '}',
 ].join('\n');
 
@@ -227,10 +223,9 @@ function bruteForceSteps(nums: number[]): Step[] {
       const take = (slice[j] ?? 0) + solve(j + 2);
       const skipValue = solve(j + 1);
       const value = Math.max(take, skipValue);
-      const deps: Highlight[] = [
-        { pos: [j + 1], kind: 'dependency', label: 'skip' },
-        { pos: [j + 2], kind: 'dependency', label: 'take' },
-      ];
+      const deps: Highlight[] = [];
+      if (j + 1 < slice.length) deps.push({ pos: [j + 1], kind: 'dependency', label: 'skip' });
+      if (j + 2 < slice.length) deps.push({ pos: [j + 2], kind: 'dependency', label: 'take' });
       rec.at(9).fill(
         [j],
         value,

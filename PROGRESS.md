@@ -109,3 +109,14 @@
 2026-11-07 | T201 | Monotonic queue DP for best gold with k jumps; 5 tests pass (O(k n^2) brute-force reference). Follow-up: SOS DP (T202).
 2026-11-07 | T202 | Sum over subsets DP with in-place bit passes; 6 tests pass (submask enumeration reference). Follow-up: matrix exponentiation (T203).
 2026-11-07 | T203 | Matrix exponentiation for fast Fibonacci; 7 tests pass (iterative Fibonacci reference). Advanced category complete. Follow-up: Stage 4 reviews (T210).
+2026-11-07 | T210 | 1D review: aligned house-robber-ii snippets, guarded brute highlight, softened brute-call claim. 70 tests pass.
+2026-11-07 | T211 | Knapsack review: no issues found. 51 tests pass.
+2026-11-07 | T212 | Strings review: fixed diagonal claim, adjusted normalization, corrected quiz. 43 tests pass.
+2026-11-07 | T213 | Grid review: repaired broken JS/C++ snippets in unique-paths, min-path-sum, maximal-square; fixed wording. 36 tests pass.
+2026-11-07 | T214 | Stocks review: repaired stock-iv JS/C++ snippets. 36 tests pass.
+2026-11-07 | T215 | Intervals review: fixed Burst Balloons neighbour wording. 37 tests pass.
+2026-11-07 | T216 | Bitmask review: fixed mask-order callout (increasing order). 17 tests pass.
+2026-11-07 | T217 | Tree review: aligned three tree modules' snippet lines; clarified diameter wording. 30 tests pass.
+2026-11-07 | T218 | Graphs review: replaced Python INF with float('inf') snippet fixes. 28 tests pass.
+2026-11-07 | T219 | Counting review: removed stale lesson bullets, corrected tie wording. 44 tests pass.
+2026-11-07 | T220 | Advanced review: fully realigned monotonic-queue snippets and codeLines. 25 tests pass.
