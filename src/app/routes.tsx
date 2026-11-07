@@ -1,9 +1,18 @@
+import { Suspense, lazy } from 'react';
 import { createHashRouter } from 'react-router-dom';
-import { AppShell } from '../components/AppShell';
+import { AppShell, LoadingPage } from '../components/AppShell';
 import { RouteError } from '../components/RouteError';
 import { PlaceholderPage } from '../pages/PlaceholderPage';
 
-const placeholder = (title: string, detail: string) => <PlaceholderPage title={title} detail={detail} />;
+const HomePage = lazy(() => import('../pages/HomePage').then((m) => ({ default: m.HomePage })));
+const ProblemPage = lazy(() => import('../pages/ProblemPage').then((m) => ({ default: m.ProblemPage })));
+const LessonPage = lazy(() => import('../pages/LessonPage').then((m) => ({ default: m.LessonPage })));
+const CheatSheetPage = lazy(() =>
+  import('../pages/CheatSheetPage').then((m) => ({ default: m.CheatSheetPage })),
+);
+const FibonacciPage = lazy(() =>
+  import('../pages/FibonacciPage').then((m) => ({ default: m.FibonacciPage })),
+);
 
 export const router = createHashRouter([
   {
@@ -11,12 +20,55 @@ export const router = createHashRouter([
     element: <AppShell />,
     errorElement: <RouteError />,
     children: [
-      { index: true, element: placeholder('DP Playground', 'The learning roadmap is being built.') },
-      { path: 'problem/:id', element: placeholder('Problem', 'This visualization is coming next.') },
-      { path: 'lesson/:id', element: placeholder('Lesson', 'This lesson is coming next.') },
-      { path: 'cheatsheet', element: placeholder('Cheat sheet', 'A printable summary is coming next.') },
-      { path: 'fibonacci', element: placeholder('Fibonacci lab', 'The flagship demo is coming next.') },
-      { path: '*', element: placeholder('Not found', 'Try heading back home.') },
+      {
+        index: true,
+        element: (
+          <Suspense fallback={<LoadingPage />}>
+            <HomePage />
+          </Suspense>
+        ),
+      },
+      {
+        path: 'problem/:id',
+        element: (
+          <Suspense fallback={<LoadingPage />}>
+            <ProblemPage />
+          </Suspense>
+        ),
+      },
+      {
+        path: 'lesson/:id',
+        element: (
+          <Suspense fallback={<LoadingPage />}>
+            <LessonPage />
+          </Suspense>
+        ),
+      },
+      {
+        path: 'cheatsheet',
+        element: (
+          <Suspense fallback={<LoadingPage />}>
+            <CheatSheetPage />
+          </Suspense>
+        ),
+      },
+      {
+        path: 'fibonacci',
+        element: (
+          <Suspense fallback={<LoadingPage />}>
+            <FibonacciPage />
+          </Suspense>
+        ),
+      },
+      {
+        path: '*',
+        element: (
+          <PlaceholderPage
+            title="Page not found"
+            detail="Sorry, we could not find that page. It may have moved or the link may be incorrect. Try the roadmap to keep learning."
+          />
+        ),
+      },
     ],
   },
 ]);

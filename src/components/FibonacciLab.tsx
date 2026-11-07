@@ -132,9 +132,10 @@ export function FibonacciLab({
         </strong>
       </p>
 
+      <div className="mt-3 overflow-x-auto">
       <table
         aria-label={`Operation comparison for n = ${clampedN}`}
-        className="mt-3 w-full border-collapse text-sm"
+        className="w-full min-w-96 border-collapse text-sm"
       >
         <caption className="pb-2 text-left font-semibold text-ink">
           Calls / computations for n = {clampedN}
@@ -191,6 +192,7 @@ export function FibonacciLab({
           </tr>
         </tbody>
       </table>
+      </div>
 
       {bruteCalls > efficientOps ? (
         <p className="mt-3 text-sm text-ink" aria-label="fewer calls factor">

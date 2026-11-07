@@ -7,6 +7,7 @@ import { PlayerControls } from '../components/PlayerControls';
 import { QuizEngine } from '../components/QuizEngine';
 import { isRendererState } from '../engine/types';
 import type { Mode, RecursionTreeState, Step, Table1DState, TreeNode } from '../engine/types';
+import { useTeacherMode } from '../engine/teacherMode';
 import { usePlayer, usePlayerKeyboard } from '../engine/usePlayer';
 import fibonacciModule from '../problems/1d/fibonacci.problem';
 import { RecursionTree } from '../renderers/RecursionTree';
@@ -83,6 +84,8 @@ function buildCallTree(treeN: number, memo: boolean): RecursionTreeState {
 export function FibonacciPage() {
   const [n, setN] = useState(fibonacciModule.defaultInput.n);
   const [mode, setMode] = useState<Mode>('bruteforce');
+  const teacherEnabled = useTeacherMode((state) => state.enabled);
+  const hideCode = useTeacherMode((state) => state.hideCode);
 
   const steps = useMemo<Step[]>(() => fibonacciModule.generateSteps({ n }, mode), [n, mode]);
   const load = usePlayer((state) => state.load);
@@ -112,13 +115,16 @@ export function FibonacciPage() {
 
   return (
     <article className="mx-auto max-w-6xl px-4 py-8 sm:px-6" aria-labelledby="fibonacci-title">
-      <Link to="/" className="text-sm font-bold text-brand underline underline-offset-4">
+      <Link
+        to="/"
+        className="text-sm font-bold text-brand underline underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas"
+      >
         ← All problems
       </Link>
 
       <header className="mt-4">
         <p className="text-sm font-bold uppercase tracking-widest text-brand">Flagship story · 1D DP</p>
-        <h1 id="fibonacci-title" className="mt-2 text-4xl font-extrabold tracking-tight">
+        <h1 id="fibonacci-title" className="mt-2 text-3xl font-extrabold tracking-tight sm:text-4xl">
           Fibonacci Numbers
         </h1>
         <p className="mt-3 max-w-prose text-lg text-muted">
@@ -133,7 +139,7 @@ export function FibonacciPage() {
           <code className="font-mono">{fibonacciModule.complexity.time}</code> with memoization or tabulation,
           versus <code className="font-mono">O(2^n)</code> for brute force.
         </p>
-        <div className="mt-4 flex flex-wrap gap-2" aria-label="Fibonacci metadata">
+        <div role="group" className="mt-4 flex flex-wrap gap-2" aria-label="Fibonacci metadata">
           <span className="chip">Difficulty: {fibonacciModule.difficulty}</span>
           <span className="chip">Category: {fibonacciModule.category}</span>
           <span className="chip">Renderer: {fibonacciModule.renderer}</span>
@@ -264,7 +270,9 @@ export function FibonacciPage() {
         </div>
 
         <aside className="flex flex-col gap-4" aria-label="Code and quiz">
-          {current ? <CodePanel code={fibonacciModule.code} codeLine={current.codeLine} /> : null}
+          {current ? (
+            <CodePanel code={fibonacciModule.code} codeLine={current.codeLine} hidden={teacherEnabled && hideCode} />
+          ) : null}
           <section className="card p-4" aria-label="Quiz">
             <QuizEngine questions={fibonacciModule.quiz} problemId={fibonacciModule.id} />
           </section>

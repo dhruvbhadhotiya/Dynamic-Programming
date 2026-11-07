@@ -13,7 +13,10 @@ export function RouteError() {
       <p className="text-sm font-bold uppercase tracking-wider text-bad">Route error</p>
       <h1 className="mt-2 text-3xl font-bold">This page hit a snag.</h1>
       <p className="mt-3 text-muted">{message}</p>
-      <Link className="mt-6 inline-block rounded-lg bg-brand px-4 py-2 font-semibold text-white" to="/">
+      <Link
+        className="mt-6 inline-block rounded-lg bg-brand px-4 py-2 font-semibold text-canvas focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas"
+        to="/"
+      >
         Back to the playground
       </Link>
     </main>

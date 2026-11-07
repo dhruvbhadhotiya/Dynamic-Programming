@@ -53,13 +53,13 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySt
           <button
             type="button"
             onClick={this.handleRetry}
-            className="rounded-lg bg-brand px-4 py-2 font-semibold text-white"
+            className="rounded-lg bg-brand px-4 py-2 font-semibold text-canvas focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas"
           >
             Try again
           </button>
           <Link
             to="/"
-            className="inline-block rounded-lg border border-line bg-surface px-4 py-2 font-semibold text-ink hover:border-brand"
+            className="inline-block rounded-lg border border-line bg-surface px-4 py-2 font-semibold text-ink hover:border-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas"
           >
             Back to the playground
           </Link>

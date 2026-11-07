@@ -82,7 +82,7 @@ export function ModeToggle({ modes, mode, onChange, operations, disabled = false
                 onKeyDown={(event) => handleKey(event, index)}
                 className={[
                   'min-h-10 rounded-lg px-3 py-2 text-sm font-semibold transition-colors',
-                  selected ? 'bg-brand text-white shadow-sm' : 'text-muted hover:bg-line/60 hover:text-ink',
+                  selected ? 'bg-brand text-canvas shadow-sm' : 'text-muted hover:bg-line/60 hover:text-ink',
                 ].join(' ')}
               >
                 <span aria-hidden="true" className="mr-1.5">{meta.symbol}</span>

@@ -120,3 +120,8 @@
 2026-11-07 | T218 | Graphs review: replaced Python INF with float('inf') snippet fixes. 28 tests pass.
 2026-11-07 | T219 | Counting review: removed stale lesson bullets, corrected tie wording. 44 tests pass.
 2026-11-07 | T220 | Advanced review: fully realigned monotonic-queue snippets and codeLines. 25 tests pass.
+2026-11-07 | T230 | Routes wired to real pages (lazy); a11y/responsive fixes including skip link, teacher mode, contrast. 597 tests pass, build green.
+2026-11-07 | T231 | Performance: memoized all 8 renderers, wired step cap into player load. 597 tests pass.
+2026-11-07 | T232 | e2e smoke spec created and run: 8 playwright tests pass.
+2026-11-07 | T233 | README with run/build/deploy/add-problem guide.
+2026-11-07 | T234 | REPORT with built/cut/limitations, cross-checked against code.

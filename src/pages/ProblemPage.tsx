@@ -17,6 +17,7 @@ import type {
   RendererState,
   Step,
 } from '../engine/types';
+import { useTeacherMode } from '../engine/teacherMode';
 import { usePlayer, usePlayerKeyboard } from '../engine/usePlayer';
 import type { InputValues } from '../engine/inputValidation';
 import { DagGraph } from '../renderers/DagGraph';
@@ -175,6 +176,8 @@ export function ProblemPage() {
   const [input, setInput] = useState<InputValues>(() => toInputValues(problem?.defaultInput));
   const [mode, setMode] = useState<Mode>(() => defaultModeFor(problem));
   const [score, setScore] = useState<PredictScore>({ correct: 0, attempts: 0 });
+  const teacherEnabled = useTeacherMode((state) => state.enabled);
+  const hideCode = useTeacherMode((state) => state.hideCode);
 
   const lastProblemId = useRef<string | undefined>(problemId);
   useEffect(() => {
@@ -235,12 +238,15 @@ export function ProblemPage() {
     return (
       <section className="mx-auto max-w-3xl px-4 py-16 sm:px-6">
         <p className="text-sm font-bold uppercase tracking-widest text-brand">DP Playground</p>
-        <h1 className="mt-3 text-4xl font-extrabold tracking-tight">Problem not found</h1>
+        <h1 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">Problem not found</h1>
         <p className="mt-4 text-lg text-muted">
           {id ? `We could not find a problem with id “${id}”.` : 'No problem id was given.'} Check the
           roadmap for a valid problem.
         </p>
-        <Link className="mt-8 inline-block rounded-lg bg-brand px-5 py-3 font-semibold text-white" to="/">
+        <Link
+          className="mt-8 inline-block rounded-lg bg-brand px-5 py-3 font-semibold text-canvas focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas"
+          to="/"
+        >
           Back to the roadmap
         </Link>
       </section>
@@ -251,17 +257,20 @@ export function ProblemPage() {
 
   return (
     <article className="mx-auto max-w-6xl px-4 py-8 sm:px-6" aria-labelledby="problem-title">
-      <Link to="/" className="text-sm font-bold text-brand underline underline-offset-4">
+      <Link
+        to="/"
+        className="text-sm font-bold text-brand underline underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas"
+      >
         ← All problems
       </Link>
 
       <header className="mt-4">
         <p className="text-sm font-bold uppercase tracking-widest text-brand">{categoryLabel}</p>
-        <h1 id="problem-title" className="mt-2 text-4xl font-extrabold tracking-tight">
+        <h1 id="problem-title" className="mt-2 text-3xl font-extrabold tracking-tight sm:text-4xl">
           {problem.title}
         </h1>
         <p className="mt-3 max-w-prose text-lg text-muted">{problem.summary}</p>
-        <div className="mt-4 flex flex-wrap gap-2" aria-label="Problem metadata">
+        <div role="group" className="mt-4 flex flex-wrap gap-2" aria-label="Problem metadata">
           <span className="chip">Difficulty: {problem.difficulty}</span>
           <span className="chip">Category: {problem.category}</span>
           <span className="chip">Renderer: {problem.renderer}</span>
@@ -306,6 +315,7 @@ export function ProblemPage() {
 
       <div className="mt-6 grid items-start gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(20rem,24rem)]">
         <section className="card p-4 sm:p-5" aria-label="Visualization">
+          <div className="overflow-x-auto">
           {current ? (
             <RendererView problem={problem} step={current} />
           ) : (
@@ -313,9 +323,10 @@ export function ProblemPage() {
               No steps to show for this input. Try applying a valid input.
             </p>
           )}
+          </div>
         </section>
 
-        <aside className="flex flex-col gap-4" aria-label="Explanation, code and practice">
+        <aside className="flex min-w-0 flex-col gap-4" aria-label="Explanation, code and practice">
           {current ? (
             <>
               <ExplanationBar message={current.message} codeLine={current.codeLine} />
@@ -325,7 +336,7 @@ export function ProblemPage() {
                   <VariableWatch vars={current.vars ?? {}} />
                 </div>
               </section>
-              <CodePanel code={problem.code} codeLine={current.codeLine} />
+              <CodePanel code={problem.code} codeLine={current.codeLine} hidden={teacherEnabled && hideCode} />
             </>
           ) : null}
           <PredictMode question={predictQuestion} score={score} onResult={handlePredictResult} />

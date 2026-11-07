@@ -16,7 +16,7 @@ export function CheatSheetPage() {
       <header className="flex flex-wrap items-start justify-between gap-4">
         <div>
           <p className="text-sm font-bold uppercase tracking-widest text-brand">DP Playground</p>
-          <h1 className="mt-2 text-4xl font-extrabold tracking-tight">Cheat Sheet</h1>
+          <h1 className="mt-2 text-3xl font-extrabold tracking-tight sm:text-4xl">Cheat Sheet</h1>
           <p className="mt-3 max-w-2xl text-lg text-muted">
             Every problem at a glance: its recurrence, state definition, complexity, and visualisation.
           </p>
@@ -42,7 +42,10 @@ export function CheatSheetPage() {
           <section key={category} aria-labelledby={`cheat-${category}`} className="card mt-8 overflow-hidden print:mt-6">
             <div className="border-b border-line px-5 py-4">
               <h2 id={`cheat-${category}`} className="text-2xl font-extrabold tracking-tight">
-                {info.icon} {info.label}
+                <span aria-hidden="true">
+                  {info.icon}{' '}
+                </span>
+                {info.label}
               </h2>
               <p className="mt-1 text-sm text-muted">{info.description}</p>
             </div>

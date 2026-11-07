@@ -47,9 +47,11 @@ export function TeacherBar(): React.JSX.Element {
 
   return (
     <div
+      id="teacher"
       role="toolbar"
       aria-label="Teacher mode"
-      className="no-print flex flex-wrap items-center gap-2 rounded-2xl border border-line bg-surface p-2"
+      tabIndex={-1}
+      className="no-print flex flex-wrap items-center gap-2 rounded-2xl border border-line bg-surface p-2 outline-none focus-visible:ring-2 focus-visible:ring-accent"
     >
       <button
         type="button"
@@ -83,6 +85,7 @@ export function TeacherBar(): React.JSX.Element {
               type="button"
               className={selected ? 'btn-primary' : 'btn-secondary'}
               aria-pressed={selected}
+              disabled={!enabled}
               onClick={() => setFontScale(option.value)}
             >
               <span>{option.label}</span>

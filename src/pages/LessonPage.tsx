@@ -91,12 +91,15 @@ export function LessonPage() {
     return (
       <section className="mx-auto max-w-3xl px-4 py-16 sm:px-6">
         <p className="text-sm font-bold uppercase tracking-widest text-brand">DP Playground</p>
-        <h1 className="mt-3 text-4xl font-extrabold tracking-tight">Lesson not found</h1>
+        <h1 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">Lesson not found</h1>
         <p className="mt-4 text-lg text-muted">
           {id ? `We could not find a lesson with id “${id}”.` : 'No lesson id was given.'} Check the roadmap
           for a valid lesson.
         </p>
-        <Link className="mt-8 inline-block rounded-lg bg-brand px-5 py-3 font-semibold text-white" to="/">
+        <Link
+          className="mt-8 inline-block rounded-lg bg-brand px-5 py-3 font-semibold text-canvas focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas"
+          to="/"
+        >
           Back to the roadmap
         </Link>
       </section>
@@ -107,13 +110,16 @@ export function LessonPage() {
 
   return (
     <article className="mx-auto max-w-3xl px-4 py-8 sm:px-6" aria-labelledby="lesson-title">
-      <Link to="/" className="text-sm font-bold text-brand underline underline-offset-4">
+      <Link
+        to="/"
+        className="text-sm font-bold text-brand underline underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas"
+      >
         ← All lessons
       </Link>
 
       <header className="mt-4">
         <p className="text-sm font-bold uppercase tracking-widest text-brand">{categoryLabel}</p>
-        <h1 id="lesson-title" className="mt-2 text-4xl font-extrabold tracking-tight">
+        <h1 id="lesson-title" className="mt-2 text-3xl font-extrabold tracking-tight sm:text-4xl">
           {lesson.title}
         </h1>
         <p className="mt-3 max-w-prose text-lg text-muted">{lesson.summary}</p>
@@ -125,7 +131,9 @@ export function LessonPage() {
           {current ? (
             <>
               <section className="card p-4 sm:p-5" aria-label="Visualization">
-                <DiagramView diagram={diagram} step={current} />
+                <div className="overflow-x-auto">
+                  <DiagramView diagram={diagram} step={current} />
+                </div>
               </section>
               <ExplanationBar message={current.message} codeLine={current.codeLine} />
               <StepCounter index={index} total={steps.length} />

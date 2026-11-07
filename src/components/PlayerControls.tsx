@@ -118,7 +118,7 @@ export function PlayerControls() {
         </output>
       </div>
 
-      <p className="mt-3 hidden flex-wrap items-center gap-x-3 gap-y-1 text-[11px] text-muted md:flex" aria-label="Keyboard shortcuts">
+      <p role="note" className="mt-3 hidden flex-wrap items-center gap-x-3 gap-y-1 text-[11px] text-muted md:flex" aria-label="Keyboard shortcuts">
         <span><kbd className="kbd">Space</kbd> play</span>
         <span><kbd className="kbd">←</kbd><kbd className="kbd">→</kbd> step</span>
         <span><kbd className="kbd">R</kbd> reset</span>

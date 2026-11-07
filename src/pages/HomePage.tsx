@@ -1,6 +1,8 @@
 import { useMemo, useState } from 'react';
+import type { MouseEvent } from 'react';
 import { Link } from 'react-router-dom';
 import { CATEGORIES, getProblemsByCategory, problems } from '../engine/registry';
+import { useTeacherMode } from '../engine/teacherMode';
 import type { CategoryId, ProblemModule } from '../engine/types';
 
 type Difficulty = ProblemModule['difficulty'];
@@ -89,6 +91,15 @@ export function HomePage() {
   const [categoryFilter, setCategoryFilter] = useState<CategoryFilter>('all');
   const [difficultyFilter, setDifficultyFilter] = useState<DifficultyFilter>('all');
   const [savedProgress] = useState<SavedProgress>(readSavedProgress);
+  const setTeacherEnabled = useTeacherMode((state) => state.setEnabled);
+
+  function enterTeacherMode(event: MouseEvent<HTMLAnchorElement>) {
+    // The href stays an anchor for semantics, but hash routing would treat
+    // "#teacher" as a route, so enable teacher mode and focus the toolbar.
+    event.preventDefault();
+    setTeacherEnabled(true);
+    requestAnimationFrame(() => document.getElementById('teacher')?.focus());
+  }
 
   const categoryOptions = useMemo(() => Object.values(CATEGORIES), []);
 
@@ -116,7 +127,7 @@ export function HomePage() {
     <div className="mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
       <header className="mx-auto w-full max-w-7xl pt-12">
         <p className="text-sm font-bold uppercase tracking-widest text-brand">DP Playground</p>
-        <h1 className="mt-3 max-w-3xl text-4xl font-extrabold tracking-tight text-ink sm:text-5xl">
+        <h1 className="mt-3 max-w-3xl text-3xl font-extrabold tracking-tight text-ink sm:text-5xl">
           Learn dynamic programming, one visualization at a time
         </h1>
         <p className="mt-4 max-w-2xl text-lg text-muted">
@@ -185,8 +196,8 @@ export function HomePage() {
             onClick={() => setCategoryFilter('all')}
             className={
               categoryFilter === 'all'
-                ? 'rounded-full border border-brand bg-brand px-3 py-1.5 text-sm font-semibold text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas'
-                : 'rounded-full border border-line bg-surface px-3 py-1.5 text-sm font-semibold text-ink hover:border-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas'
+                ? 'min-h-11 rounded-full border border-brand bg-brand px-3 py-1.5 text-sm font-semibold text-canvas focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas'
+                : 'min-h-11 rounded-full border border-line bg-surface px-3 py-1.5 text-sm font-semibold text-ink hover:border-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas'
             }
           >
             All categories
@@ -201,8 +212,8 @@ export function HomePage() {
                 onClick={() => setCategoryFilter(category.id)}
                 className={
                   isActive
-                    ? 'rounded-full border border-brand bg-brand px-3 py-1.5 text-sm font-semibold text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas'
-                    : 'rounded-full border border-line bg-surface px-3 py-1.5 text-sm font-semibold text-ink hover:border-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas'
+                    ? 'min-h-11 rounded-full border border-brand bg-brand px-3 py-1.5 text-sm font-semibold text-canvas focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas'
+                    : 'min-h-11 rounded-full border border-line bg-surface px-3 py-1.5 text-sm font-semibold text-ink hover:border-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas'
                 }
               >
                 {category.label}
@@ -234,6 +245,7 @@ export function HomePage() {
               <article className="flex h-full flex-col rounded-2xl border border-line bg-surface p-5 shadow-sm">
                 <div className="flex flex-wrap items-center gap-2">
                   <span
+                    role="img"
                     aria-label={`Difficulty: ${DIFFICULTY_LABELS[problem.difficulty]}`}
                     className="inline-flex items-center gap-1.5 rounded-full border border-line bg-canvas px-2.5 py-1 text-xs font-bold text-ink"
                   >
@@ -274,7 +286,8 @@ export function HomePage() {
         </p>
         <a
           href="/#teacher"
-          className="mt-4 inline-block rounded-lg bg-brand px-4 py-2 text-sm font-semibold text-white hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas"
+          onClick={enterTeacherMode}
+          className="mt-4 inline-block rounded-lg bg-brand px-4 py-2 text-sm font-semibold text-canvas hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas"
         >
           Enter teacher mode
         </a>

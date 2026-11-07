@@ -40,8 +40,43 @@
 
   body {
     @apply bg-canvas font-sans text-ink antialiased;
-    min-width: 320px;
     min-height: 100vh;
+    overflow-x: clip;
+  }
+
+  img,
+  video {
+    max-width: 100%;
+    height: auto;
+  }
+
+  #main:focus {
+    outline: none;
+  }
+
+  /* Teacher mode enlarges Tailwind rem-based text, which parent font-size cannot do. */
+  .teacher-mode-large {
+    font-size: 112.5%;
+  }
+
+  .teacher-mode-extra-large {
+    font-size: 125%;
+  }
+
+  .teacher-mode-large .text-xs {
+    font-size: 0.875rem;
+  }
+
+  .teacher-mode-extra-large .text-xs {
+    font-size: 0.9375rem;
+  }
+
+  .teacher-mode-large .text-sm {
+    font-size: 1rem;
+  }
+
+  .teacher-mode-extra-large .text-sm {
+    font-size: 1.0625rem;
   }
 
   ::selection {
@@ -100,7 +135,7 @@
   }
 
   .field {
-    @apply min-h-11 w-full rounded-xl border border-line bg-canvas px-3 py-2 text-sm text-ink outline-none transition-colors placeholder:text-muted/70 focus:border-brand;
+    @apply min-h-11 w-full rounded-xl border border-line bg-canvas px-3 py-2 text-sm text-ink outline-none transition-colors placeholder:text-muted focus:border-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1 focus-visible:ring-offset-canvas;
   }
 
   .label {
