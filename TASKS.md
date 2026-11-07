@@ -125,7 +125,7 @@ Gate 2: full suite and build pass; flagship route works from static build.
 ### 3i Graphs
 - [x] T180 | src/problems/graphs/dag-longest-path.problem.ts, src/problems/graphs/dag-longest-path.problem.test.ts, src/engine/types.ts, src/renderers/DagGraph.tsx, src/renderers/DagGraph.test.tsx | Longest Path in DAG.
 - [x] T181 | src/problems/graphs/floyd-warshall.problem.ts, src/problems/graphs/floyd-warshall.problem.test.ts | Floyd–Warshall.
-- [ ] T182 | src/problems/graphs/bellman-ford.problem.ts, src/problems/graphs/bellman-ford.problem.test.ts | Bellman–Ford.
+- [x] T182 | src/problems/graphs/bellman-ford.problem.ts, src/problems/graphs/bellman-ford.problem.test.ts | Bellman–Ford.
 - [ ] T183 | src/problems/graphs/cheapest-flights-k-stops.problem.ts, src/problems/graphs/cheapest-flights-k-stops.problem.test.ts | Cheapest Flights Within K Stops.
 - [ ] T184 | src/lessons/graphs.lesson.ts | Graph DP lesson with animated DAG.
 ### 3j Counting / Probability / Games

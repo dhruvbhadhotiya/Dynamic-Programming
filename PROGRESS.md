@@ -95,3 +95,4 @@
 2026-11-06 | T175 | Tree DP lesson with animated 7-node rob/skip post-order; 9 steps, final answer 12, validation clean. Tree category complete. Follow-up: DAG longest path (T180).
 2026-11-07 | T180 | Longest Path in DAG with memo/tabulation, path reconstruction, and scoped node/edge highlights; 15 targeted tests pass, typecheck + lint clean. Follow-up: Floyd-Warshall (T181).
 2026-11-07 | T181 | Floyd-Warshall all-pairs table with in-place relaxation rounds; 6 tests pass (Dijkstra reference). Follow-up: Bellman-Ford (T182).
+2026-11-07 | T182 | Bellman-Ford with negative edges, early convergence, and reachable negative-cycle detection; 6 tests pass (Floyd-Warshall reference). Follow-up: Cheapest Flights Within K Stops (T183).
