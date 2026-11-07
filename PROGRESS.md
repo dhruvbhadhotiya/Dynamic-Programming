@@ -87,3 +87,4 @@
 2026-11-06 | T161 | Assignment Problem bitmask DP module; 6 tests pass (job-permutation reference). Follow-up: Shortest Path Visiting All Nodes (T162).
 2026-11-06 | T162 | Shortest Path Visiting All Nodes BFS-over-(mask,node) module; 5 tests pass (Floyd-Warshall + visit-order reference). Follow-up: bitmask lesson (T163).
 2026-11-06 | T163 | Bitmask DP lesson with animated assignment subset grid; 10 steps, validation clean. Bitmask category complete. Follow-up: tree diameter (T170).
+2026-11-06 | T170 | Binary Tree Diameter post-order module with memo/tabulation modes; 6 tests pass (all-pairs BFS reference). Follow-up: Maximum Independent Set on Tree (T171).
