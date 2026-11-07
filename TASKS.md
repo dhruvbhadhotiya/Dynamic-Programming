@@ -109,7 +109,7 @@ Gate 2: full suite and build pass; flagship route works from static build.
 - [x] T153 | src/problems/intervals/palindrome-partition-ii.problem.ts, src/problems/intervals/palindrome-partition-ii.problem.test.ts | Palindrome Partitioning II.
 - [x] T154 | src/problems/intervals/word-break.problem.ts, src/problems/intervals/word-break.problem.test.ts | Word Break.
 - [x] T155 | src/problems/intervals/split-array-largest-sum.problem.ts, src/problems/intervals/split-array-largest-sum.problem.test.ts | Split Array Largest Sum.
-- [ ] T156 | src/lessons/intervals.lesson.ts | Interval DP lesson with triangle diagram.
+- [x] T156 | src/lessons/intervals.lesson.ts | Interval DP lesson with triangle diagram.
 ### 3g Bitmask
 - [ ] T160 | src/problems/bitmask/tsp.problem.ts, src/problems/bitmask/tsp.problem.test.ts | TSP Held-Karp.
 - [ ] T161 | src/problems/bitmask/assignment.problem.ts, src/problems/bitmask/assignment.problem.test.ts | Assignment Problem.

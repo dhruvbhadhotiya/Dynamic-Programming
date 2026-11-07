@@ -82,3 +82,4 @@
 2026-11-06 | T153 | Palindrome Partitioning II interval DP module; 6 tests pass (cut-subset reference). Follow-up: Word Break (T154).
 2026-11-06 | T154 | Word Break suffix DP module with brute-force/memo/tabulation modes; 7 tests pass (cut-subset reference). Follow-up: Split Array Largest Sum (T155).
 2026-11-06 | T155 | Split Array Largest Sum table DP module (memo/tabulation); 6 tests pass (exhaustive cut reference). Follow-up: intervals lesson (T156).
+2026-11-06 | T156 | Interval DP lesson with animated 3-matrix triangle; 12 steps, validation clean. Intervals category complete. Follow-up: bitmask TSP (T160).
