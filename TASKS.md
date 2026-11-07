@@ -117,7 +117,7 @@ Gate 2: full suite and build pass; flagship route works from static build.
 - [x] T163 | src/lessons/bitmask.lesson.ts | Bitmask lesson with animated subset grid.
 ### 3h Tree DP
 - [x] T170 | src/problems/tree/tree-diameter.problem.ts, src/problems/tree/tree-diameter.problem.test.ts | Binary Tree Diameter.
-- [ ] T171 | src/problems/tree/max-independent-set.problem.ts, src/problems/tree/max-independent-set.problem.test.ts | Maximum Independent Set on Tree.
+- [x] T171 | src/problems/tree/max-independent-set.problem.ts, src/problems/tree/max-independent-set.problem.test.ts | Maximum Independent Set on Tree.
 - [ ] T172 | src/problems/tree/house-robber-iii.problem.ts, src/problems/tree/house-robber-iii.problem.test.ts | House Robber III.
 - [ ] T173 | src/problems/tree/rerooting.problem.ts, src/problems/tree/rerooting.problem.test.ts | Tree Rerooting.
 - [ ] T174 | src/problems/tree/binary-tree-cameras.problem.ts, src/problems/tree/binary-tree-cameras.problem.test.ts | Binary Tree Cameras.
