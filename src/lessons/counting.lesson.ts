@@ -185,8 +185,7 @@ const lesson: Lesson = {
       heading: 'Layered and tight digit DP',
       body: "Layered DP counts walks or routes step by step by making the layer an explicit dimension. Knight-probability fills one board layer per knight move: dp[t][cell] is the number of walks of exactly t moves ending at cell, and each next layer is the sum of the previous layer over all knight-neighbours. The final answer divides the walk count by 8^k, because each move has 8 equally likely choices. A node-only table would merge walks that arrived in different numbers of steps and lose exactly the information the transition needs.\n\nDigit-dp is the same layered idea with a tighter state. It walks the decimal digits of n left to right with pos, tight, and noFour. While tight is true, the next digit may not exceed the digit of n at pos; choosing a smaller digit flips tight to false forever and frees the remaining digits to 0..9. The noFour flag remembers whether a 4 already appeared, so the finished rows can sum only the columns where noFour is true. Flattening (tight, noFour) into four columns gives the row counts dp[pos][0..3]; the answer for n = 19 is dp[L][tight+no4] + dp[L][loose+no4] = 18, excluding the two numbers 4 and 14. In both problems the fill order is forced: layer t + 1 after layer t, digit pos + 1 after pos, never sideways.",
       bullets: [
-        'Layer = moves used, digits fixed, or flights taken; fill layer by layer.',
-        'Copy forward for at most t steps; no copy for exactly t steps.',
+        'Layer = moves used or digits fixed; fill layer by layer, never sideways within a layer.',
         'Tight means the prefix still equals the bound and caps the next digit.',
         'digit-dp flattens (tight, noFour) into 4 columns and sums noFour columns.',
         'knight-probability divides staying walks by 8^k for the probability.',
@@ -202,7 +201,7 @@ const lesson: Lesson = {
         'stone-game: same interval state decides whether the first player wins.',
         'Take-left value = nums[l] + (intervalTotal - dp[l+1][r]); take-right mirrors it.',
         'Fill short intervals before long ones: length 1, then 2, up to n.',
-        'Answer compares dp[0][n-1] with half the total (ties favour player 1).',
+        'Answer compares dp[0][n-1] with half the total: predict-the-winner uses >= (ties favour player 1), stone-game uses strict > (ties are not a win).',
       ],
       callout:
         'Define dp[l][r] for whoever moves now, never for player 1 always. An always-player-1 state cannot add the opponent branch without flipping its meaning mid-recurrence.',
