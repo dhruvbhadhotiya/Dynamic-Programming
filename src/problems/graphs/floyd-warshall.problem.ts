@@ -23,7 +23,7 @@ const FALLBACK = [
 const pythonCode = [
   'def floyd_warshall(w):',
   '    n = len(w)',
-  '    dist = [[0 if i == j else (w[i][j] if w[i][j] > 0 else INF) for j in range(n)] for i in range(n)]',
+  "    dist = [[0 if i == j else (w[i][j] if w[i][j] > 0 else float('inf')) for j in range(n)] for i in range(n)]",
   '    for k in range(n):',
   '        for i in range(n):',
   '            for j in range(n):',

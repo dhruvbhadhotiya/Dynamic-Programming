@@ -24,7 +24,7 @@ const FALLBACK = [
 
 const pythonCode = [
   'def bellman_ford(n, edges, source):',
-  '    dist = [INF] * n; dist[source] = 0',
+  "    dist = [float('inf')] * n; dist[source] = 0",
   '    for _ in range(n - 1):',
   '        changed = False',
   '        for u, v, w in edges:',
