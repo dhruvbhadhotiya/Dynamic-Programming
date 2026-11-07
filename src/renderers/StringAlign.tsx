@@ -1,3 +1,4 @@
+import { memo, useMemo } from 'react';
 import type { CellValue, Highlight, StringAlignState } from '../engine/types';
 import { cellTokens } from '../styles/tokens';
 
@@ -13,11 +14,14 @@ function displayValue(value: CellValue): string {
   return String(value);
 }
 
-export function StringAlign({ state, highlights, compact = false }: StringAlignProps) {
-  const active = new Map<string, Highlight>();
-  for (const highlight of highlights) active.set(highlight.pos.join(','), highlight);
-  const columns = ['ε', ...Array.from(state.b)];
-  const rows = ['ε', ...Array.from(state.a)];
+function StringAlignView({ state, highlights, compact = false }: StringAlignProps) {
+  const active = useMemo(() => {
+    const map = new Map<string, Highlight>();
+    for (const highlight of highlights) map.set(highlight.pos.join(','), highlight);
+    return map;
+  }, [highlights]);
+  const columns = useMemo(() => ['ε', ...Array.from(state.b)], [state.b]);
+  const rows = useMemo(() => ['ε', ...Array.from(state.a)], [state.a]);
   const cellSize = compact ? 'h-8 min-w-8 px-1 text-xs' : 'h-10 min-w-10 px-2 text-sm';
 
   return (
@@ -96,3 +100,5 @@ export function StringAlign({ state, highlights, compact = false }: StringAlignP
     </div>
   );
 }
+
+export const StringAlign = memo(StringAlignView);

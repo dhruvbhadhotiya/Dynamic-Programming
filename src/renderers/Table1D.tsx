@@ -1,3 +1,4 @@
+import { memo, useMemo } from 'react';
 import type { CellValue, Highlight, Table1DState } from '../engine/types';
 import { cellTokens } from '../styles/tokens';
 
@@ -25,7 +26,7 @@ function valueText(value: CellValue): string | null {
   return String(value);
 }
 
-function ValueCell({
+const ValueCell = memo(function ValueCell({
   index,
   value,
   highlight,
@@ -74,11 +75,11 @@ function ValueCell({
       )}
     </div>
   );
-}
+});
 
-export function Table1D({ state, highlights, compact = false }: Table1DProps) {
+function Table1DView({ state, highlights, compact = false }: Table1DProps) {
   const { values, labels, indexName, caption } = state;
-  const winners = winningHighlights(highlights, values.length);
+  const winners = useMemo(() => winningHighlights(highlights, values.length), [highlights, values.length]);
 
   return (
     <figure className="m-0 flex w-full flex-col gap-2" aria-label={caption ?? '1D dynamic programming table'}>
@@ -113,3 +114,5 @@ export function Table1D({ state, highlights, compact = false }: Table1DProps) {
     </figure>
   );
 }
+
+export const Table1D = memo(Table1DView);

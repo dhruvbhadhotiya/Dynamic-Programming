@@ -1,3 +1,4 @@
+import { memo, useMemo } from 'react';
 import type { BitmaskGridState, CellValue, Highlight } from '../engine/types';
 import { cellTokens } from '../styles/tokens';
 
@@ -25,14 +26,18 @@ function valueText(value: CellValue | undefined): string | null {
   return String(value);
 }
 
-function toBinary(mask: number, bits: number): string {
-  return mask.toString(2).padStart(bits, '0');
-}
-
-export function BitmaskGrid({ state, highlights, className = '' }: BitmaskGridProps) {
+function BitmaskGridView({ state, highlights, className = '' }: BitmaskGridProps) {
   const { bits, values, labels, caption } = state;
+  const validBits = Number.isInteger(bits) && bits >= 1;
+  const total = validBits ? 2 ** bits : 0;
+  const winners = useMemo(() => winningHighlights(highlights, total), [highlights, total]);
+  const positions = useMemo(() => Array.from({ length: validBits ? bits : 0 }, (_, i) => bits - 1 - i), [bits, validBits]);
+  const binaries = useMemo(
+    () => Array.from({ length: total }, (_, mask) => mask.toString(2).padStart(bits, '0')),
+    [bits, total],
+  );
 
-  if (!Number.isInteger(bits) || bits < 1) {
+  if (!validBits) {
     return (
       <figure className={`m-0 flex w-full flex-col gap-2 ${className}`.trim()} aria-label={caption ?? 'Bitmask DP grid'}>
         {caption && <figcaption className="text-sm font-bold text-ink">{caption}</figcaption>}
@@ -43,10 +48,7 @@ export function BitmaskGrid({ state, highlights, className = '' }: BitmaskGridPr
     );
   }
 
-  const total = 2 ** bits;
   const compact = bits >= 5;
-  const winners = winningHighlights(highlights, total);
-  const positions = Array.from({ length: bits }, (_, i) => bits - 1 - i);
   const cellPad = compact ? 'px-1.5 py-1 text-xs' : 'px-3 py-1.5 text-sm';
   const headPad = compact ? 'px-1.5 py-1 text-[11px]' : 'px-3 py-1.5 text-xs uppercase tracking-wide';
 
@@ -99,7 +101,7 @@ export function BitmaskGrid({ state, highlights, className = '' }: BitmaskGridPr
               const token = highlight ? cellTokens[highlight.kind] : undefined;
               const text = valueText(values[mask]);
               const label = labels?.[mask];
-              const binary = toBinary(mask, bits);
+              const binary = binaries[mask] ?? mask.toString(2);
               return (
                 <tr key={mask} data-mask={mask} data-highlight={highlight?.kind ?? 'none'}>
                   <th scope="row" className={`border border-line font-mono font-bold text-ink ${cellPad}`}>
@@ -140,3 +142,5 @@ export function BitmaskGrid({ state, highlights, className = '' }: BitmaskGridPr
     </figure>
   );
 }
+
+export const BitmaskGrid = memo(BitmaskGridView);

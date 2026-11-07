@@ -44,6 +44,32 @@ describe('usePlayer', () => {
     expect(usePlayer.getState()).toMatchObject({ index: 0, playing: true });
   });
 
+  it('caps enormous step lists on load with an honest truncation message', () => {
+    const big: Step[] = Array.from({ length: 600 }, (_, index) => {
+      const step: Step = {
+        state: { kind: 'table1d', values: [index] },
+        highlights: [{ pos: [0], kind: 'active' }],
+        codeLine: 1,
+        message: index === 599 ? 'The answer is 42.' : `Step ${index}.`,
+      };
+      if (index === 599) step.vars = { answer: 42 };
+      return step;
+    });
+
+    usePlayer.getState().load(big);
+    const stored = usePlayer.getState().steps;
+    expect(stored).toHaveLength(500);
+    const truncation = stored.at(-1);
+    expect(truncation?.message).toContain('first 499 of 600 steps');
+    expect(truncation?.message).toContain('The answer is 42.');
+    expect(truncation?.vars?.answer).toBe(42);
+  });
+
+  it('loads small step lists unchanged', () => {
+    usePlayer.getState().load(steps);
+    expect(usePlayer.getState().steps).toBe(steps);
+  });
+
   it('clamps speeds and steps through the speed scale', () => {
     usePlayer.getState().setSpeed(99);
     expect(usePlayer.getState().speed).toBe(4);

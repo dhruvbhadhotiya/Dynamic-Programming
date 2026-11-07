@@ -1,3 +1,4 @@
+import { memo, useMemo } from 'react';
 import type { CellKind, DagGraphState, GraphNode, Highlight } from '../engine/types';
 import { cellTokens } from '../styles/tokens';
 
@@ -72,21 +73,27 @@ function markerVariant(kind: CellKind | undefined): CellKind | 'default' {
   return kind ?? 'default';
 }
 
-export function DagGraph({ state, highlights, className = '' }: DagGraphProps) {
-  const directed = state.directed ?? true;
-  const nodeHighlights = winningHighlights(highlights, state.nodes.length, 'node');
-  const edgeHighlights = winningHighlights(highlights, state.edges.length, 'edge');
-  const byId = new Map(state.nodes.map((node) => [node.id, node]));
+const markers: { variant: 'default' | CellKind; color: string }[] = [
+  { variant: 'default', color: 'rgb(var(--muted))' },
+  { variant: 'active', color: EDGE_COLOR.active },
+  { variant: 'dependency', color: EDGE_COLOR.dependency },
+  { variant: 'result', color: EDGE_COLOR.result },
+  { variant: 'base', color: EDGE_COLOR.base },
+  { variant: 'path', color: EDGE_COLOR.path },
+  { variant: 'pruned', color: EDGE_COLOR.pruned },
+];
 
-  const markers: { variant: 'default' | CellKind; color: string }[] = [
-    { variant: 'default', color: 'rgb(var(--muted))' },
-    { variant: 'active', color: EDGE_COLOR.active },
-    { variant: 'dependency', color: EDGE_COLOR.dependency },
-    { variant: 'result', color: EDGE_COLOR.result },
-    { variant: 'base', color: EDGE_COLOR.base },
-    { variant: 'path', color: EDGE_COLOR.path },
-    { variant: 'pruned', color: EDGE_COLOR.pruned },
-  ];
+function DagGraphView({ state, highlights, className = '' }: DagGraphProps) {
+  const directed = state.directed ?? true;
+  const nodeHighlights = useMemo(
+    () => winningHighlights(highlights, state.nodes.length, 'node'),
+    [highlights, state.nodes.length],
+  );
+  const edgeHighlights = useMemo(
+    () => winningHighlights(highlights, state.edges.length, 'edge'),
+    [highlights, state.edges.length],
+  );
+  const byId = useMemo(() => new Map(state.nodes.map((node) => [node.id, node])), [state.nodes]);
 
   return (
     <figure className={`m-0 flex w-full flex-col gap-2 ${className}`.trim()} aria-label={state.caption ?? 'DAG graph'}>
@@ -300,3 +307,5 @@ export function DagGraph({ state, highlights, className = '' }: DagGraphProps) {
     </figure>
   );
 }
+
+export const DagGraph = memo(DagGraphView);

@@ -1,3 +1,4 @@
+import { memo, useMemo } from 'react';
 import type { CellKind, CellValue, Highlight, Table2DState } from '../engine/types';
 import { cellTokens } from '../styles/tokens';
 
@@ -40,7 +41,7 @@ function analyse(highlights: Highlight[]) {
   return { cells, arrows };
 }
 
-function ValueView({ value }: { value: CellValue }) {
+const ValueView = memo(function ValueView({ value }: { value: CellValue }) {
   if (value === null) {
     return (
       <>
@@ -51,13 +52,13 @@ function ValueView({ value }: { value: CellValue }) {
   }
   if (typeof value === 'boolean') return <>{value ? 'Yes' : 'No'}</>;
   return <>{value}</>;
-}
+});
 
-export function Table2D({ state, highlights, compact = false }: Table2DProps) {
+function Table2DView({ state, highlights, compact = false }: Table2DProps) {
   const columnCount = state.values.reduce((max, row) => Math.max(max, row.length), state.colLabels?.length ?? 0);
   const hasRowHeaders = Boolean(state.rowLabels?.length || state.rowHeader);
   const showHead = hasRowHeaders || Boolean(state.colLabels?.length || state.colHeader);
-  const { cells, arrows } = analyse(highlights);
+  const { cells, arrows } = useMemo(() => analyse(highlights), [highlights]);
   const cellClass = compact ? 'px-1.5 py-1 text-xs' : 'px-3 py-2 text-sm';
   const headClass = `border border-line bg-line/30 font-bold text-muted ${
     compact ? 'px-1.5 py-1 text-[10px]' : 'px-3 py-2 text-xs uppercase tracking-wide'
@@ -132,3 +133,5 @@ export function Table2D({ state, highlights, compact = false }: Table2DProps) {
     </div>
   );
 }
+
+export const Table2D = memo(Table2DView);

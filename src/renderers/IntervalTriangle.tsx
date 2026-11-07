@@ -1,3 +1,4 @@
+import { memo, useMemo } from 'react';
 import type { CellKind, CellValue, Highlight, IntervalTriangleState } from '../engine/types';
 import { cellTokens } from '../styles/tokens';
 
@@ -24,7 +25,7 @@ function winningHighlights(highlights: Highlight[], size: number): Map<string, H
   return winners;
 }
 
-function ValueView({ value }: { value: CellValue }) {
+const ValueView = memo(function ValueView({ value }: { value: CellValue }) {
   if (value === null) {
     return (
       <>
@@ -35,9 +36,9 @@ function ValueView({ value }: { value: CellValue }) {
   }
   if (typeof value === 'boolean') return <>{value ? 'Yes' : 'No'}</>;
   return <>{value}</>;
-}
+});
 
-export function IntervalTriangle({ state, highlights, compact = false }: IntervalTriangleProps) {
+function IntervalTriangleView({ state, highlights, compact = false }: IntervalTriangleProps) {
   const { values, rowLabels, colLabels, caption } = state;
   const size = Math.max(
     values.length,
@@ -45,7 +46,7 @@ export function IntervalTriangle({ state, highlights, compact = false }: Interva
     colLabels?.length ?? 0,
     values.reduce((max, row) => Math.max(max, row?.length ?? 0), 0),
   );
-  const winners = winningHighlights(highlights, size);
+  const winners = useMemo(() => winningHighlights(highlights, size), [highlights, size]);
   const cellClass = compact ? 'px-1.5 py-1 text-xs' : 'px-3 py-2 text-sm';
   const headClass = `border border-line bg-line/30 font-bold text-muted ${
     compact ? 'px-1.5 py-1 text-[10px]' : 'px-3 py-2 text-xs uppercase tracking-wide'
@@ -123,3 +124,5 @@ export function IntervalTriangle({ state, highlights, compact = false }: Interva
     </div>
   );
 }
+
+export const IntervalTriangle = memo(IntervalTriangleView);

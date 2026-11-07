@@ -1,3 +1,4 @@
+import { memo, useMemo } from 'react';
 import type { Highlight, RecursionTreeState, TreeNode, TreeNodeKind } from '../engine/types';
 import { cellTokens } from '../styles/tokens';
 
@@ -97,34 +98,46 @@ function layoutTree(nodes: TreeNode[]): { placed: PlacedNode[]; maxDepth: number
   };
 }
 
-export function RecursionTree({ state, highlights }: RecursionTreeProps) {
-  const { placed, maxDepth, maxX } = layoutTree(state.nodes);
-  const byIndex = new Map<number, PlacedNode>();
-  const byId = new Map<string, PlacedNode>();
-  for (const item of placed) {
-    byIndex.set(item.index, item);
-    byId.set(item.node.id, item);
-  }
-
-  const highlightAt = new Map<number, Highlight>();
-  for (const highlight of highlights) {
-    const index = highlight.pos[0];
-    if (index !== undefined) highlightAt.set(index, highlight);
-  }
-
-  const focusPath = new Set<string>();
-  for (const [index, highlight] of highlightAt) {
-    if (highlight.kind !== 'active') continue;
-    let current = byIndex.get(index);
-    while (current && !focusPath.has(current.node.id)) {
-      focusPath.add(current.node.id);
-      current = current.node.parentId ? byId.get(current.node.parentId) : undefined;
+function RecursionTreeView({ state, highlights }: RecursionTreeProps) {
+  const { placed, maxDepth, maxX, byId, highlightAt, focusPath, memoCount } = useMemo(() => {
+    const { placed: placedNodes, maxDepth: depth, maxX: x } = layoutTree(state.nodes);
+    const indexMap = new Map<number, PlacedNode>();
+    const idMap = new Map<string, PlacedNode>();
+    for (const item of placedNodes) {
+      indexMap.set(item.index, item);
+      idMap.set(item.node.id, item);
     }
-  }
+
+    const highlightMap = new Map<number, Highlight>();
+    for (const highlight of highlights) {
+      const index = highlight.pos[0];
+      if (index !== undefined) highlightMap.set(index, highlight);
+    }
+
+    const focus = new Set<string>();
+    for (const [index, highlight] of highlightMap) {
+      if (highlight.kind !== 'active') continue;
+      let current = indexMap.get(index);
+      while (current && !focus.has(current.node.id)) {
+        focus.add(current.node.id);
+        current = current.node.parentId ? idMap.get(current.node.parentId) : undefined;
+      }
+    }
+
+    return {
+      placed: placedNodes,
+      maxDepth: depth,
+      maxX: x,
+      byIndex: indexMap,
+      byId: idMap,
+      highlightAt: highlightMap,
+      focusPath: focus,
+      memoCount: state.memoHits ?? state.nodes.filter((node) => node.kind === 'memo').length,
+    };
+  }, [state.nodes, state.memoHits, highlights]);
 
   const width = Math.max(1, maxX + 1) * X_STEP - (X_STEP - NODE_WIDTH);
   const height = maxDepth * Y_STEP + NODE_HEIGHT;
-  const memoCount = state.memoHits ?? state.nodes.filter((node) => node.kind === 'memo').length;
 
   return (
     <figure className="m-0 flex w-full flex-col gap-2" aria-label={state.caption ?? 'Recursion tree'}>
@@ -227,3 +240,5 @@ export function RecursionTree({ state, highlights }: RecursionTreeProps) {
     </figure>
   );
 }
+
+export const RecursionTree = memo(RecursionTreeView);

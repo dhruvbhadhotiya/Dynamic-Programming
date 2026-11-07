@@ -1,3 +1,4 @@
+import { memo, useMemo } from 'react';
 import type { CellValue, Highlight, TreeDPNode, TreeDPState, TreeNodeKind } from '../engine/types';
 import { cellTokens } from '../styles/tokens';
 
@@ -107,22 +108,33 @@ function layoutTree(nodes: TreeDPNode[]): { placed: PlacedNode[]; maxDepth: numb
   };
 }
 
-export function TreeDP({ state, highlights, className = '' }: TreeDPProps) {
-  const { placed, maxDepth, maxX } = layoutTree(state.nodes);
-  const byId = new Map<string, PlacedNode>();
-  for (const item of placed) byId.set(item.node.id, item);
+function TreeDPView({ state, highlights, className = '' }: TreeDPProps) {
+  const { placed, maxDepth, maxX, byId, highlightAt, summaries, withState } = useMemo(() => {
+    const { placed: placedNodes, maxDepth: depth, maxX: x } = layoutTree(state.nodes);
+    const idMap = new Map<string, PlacedNode>();
+    for (const item of placedNodes) idMap.set(item.node.id, item);
 
-  const highlightAt = new Map<number, Highlight>();
-  for (const highlight of highlights) {
-    const [index] = highlight.pos;
-    if (highlight.pos.length === 1 && index !== undefined && index >= 0 && index < state.nodes.length) {
-      highlightAt.set(index, highlight);
+    const highlightMap = new Map<number, Highlight>();
+    for (const highlight of highlights) {
+      const [index] = highlight.pos;
+      if (highlight.pos.length === 1 && index !== undefined && index >= 0 && index < state.nodes.length) {
+        highlightMap.set(index, highlight);
+      }
     }
-  }
+
+    return {
+      placed: placedNodes,
+      maxDepth: depth,
+      maxX: x,
+      byId: idMap,
+      highlightAt: highlightMap,
+      summaries: state.nodes.map((node) => valuesText(node)),
+      withState: state.nodes.filter((node) => node.values && Object.keys(node.values).length > 0).length,
+    };
+  }, [state.nodes, highlights]);
 
   const width = Math.max(1, maxX + 1) * X_STEP - (X_STEP - NODE_WIDTH);
   const height = maxDepth * Y_STEP + NODE_HEIGHT;
-  const withState = state.nodes.filter((node) => node.values && Object.keys(node.values).length > 0).length;
 
   return (
     <figure className={`m-0 flex w-full flex-col gap-2 ${className}`.trim()} aria-label={state.caption ?? 'Tree DP'}>
@@ -178,7 +190,7 @@ export function TreeDP({ state, highlights, className = '' }: TreeDPProps) {
               const token = highlight ? cellTokens[highlight.kind] : null;
               const classes = token ? `${token.classes} ${token.ring}` : style.classes;
               const values = node.values ? Object.entries(node.values) : [];
-              const summary = valuesText(node);
+              const summary = summaries[index] ?? '';
               const label = `${node.label}${node.detail ? `, ${node.detail}` : ''}, ${style.label}${summary ? `, ${summary}` : ''}${highlight ? `, ${token?.label ?? ''}${highlight.label ? `, ${highlight.label}` : ''}` : ''}, level ${depth + 1}`;
 
               return (
@@ -231,7 +243,7 @@ export function TreeDP({ state, highlights, className = '' }: TreeDPProps) {
       <ul className="sr-only" aria-label={`${state.nodes.length} tree DP nodes`}>
         {state.nodes.map((node, index) => {
           const kind = node.kind ?? 'pending';
-          const summary = valuesText(node);
+          const summary = summaries[index] ?? '';
           return (
             <li key={`${node.id}-${index}`}>
               {`${node.label}${node.detail ? `, ${node.detail}` : ''}, ${kindStyles[kind].label}${summary ? `, ${summary}` : ''}`}
@@ -242,3 +254,5 @@ export function TreeDP({ state, highlights, className = '' }: TreeDPProps) {
     </figure>
   );
 }
+
+export const TreeDP = memo(TreeDPView);

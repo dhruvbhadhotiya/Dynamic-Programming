@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { create } from 'zustand';
+import { capSteps } from './stepCap';
 import type { Step } from './types';
 
 export const PLAYBACK_SPEEDS = [0.25, 0.5, 1, 1.5, 2, 3, 4] as const;
@@ -37,12 +38,14 @@ export const usePlayer = create<PlayerState>()((set, get) => ({
   playing: false,
   speed: 1,
 
-  load: (steps, options = {}) =>
+  load: (steps, options = {}) => {
+    const capped = capSteps(steps);
     set({
-      steps,
+      steps: capped,
       index: 0,
-      playing: Boolean(options.autoplay) && steps.length > 1,
-    }),
+      playing: Boolean(options.autoplay) && capped.length > 1,
+    });
+  },
 
   play: () => {
     const { steps, index } = get();
