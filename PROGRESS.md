@@ -76,3 +76,4 @@
 2026-11-06 | T144 | Stock with Cooldown module; 6 tests pass.
 2026-11-06 | T145 | Stock with Transaction Fee module; 6 tests pass.
 2026-11-06 | T146 | Stock state-machine lesson with cooldown diagram; validation clean. Stocks category complete.
+2026-11-06 | T150 | Matrix Chain Multiplication interval DP module; 6 tests pass (exhaustive reference). Follow-up: Burst Balloons (T151).
