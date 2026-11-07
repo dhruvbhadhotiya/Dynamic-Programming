@@ -116,7 +116,9 @@ const lesson: Lesson = {
         'popcount(mask) often tells you which item is added next.',
         'Answer usually lives in dp[(1 << n) - 1].',
       ],
-      callout: 'If the transition removes a bit, increasing mask order works; if it adds a bit, iterate masks in decreasing order or use memoized recursion.',
+      callout:
+        'Removing a bit makes the mask smaller and adding a bit makes it larger, so increasing-mask order walks both directions safely: backward removal reads a smaller predecessor, forward addition fills a larger successor.',
+
     },
     {
       heading: 'When order matters: mask + last',
